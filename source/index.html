@@ -1,15 +1,122 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
 </head>
 
-<body class="page">
+<body class="page__body">
   <header class="main-header">
+    <a class="main-header__logo" href="/source/index.html">
+      <img class="main-header__logo-image" src="./img/svg/logo-icon.svg" alt="Логотип сайта Седона." width="185"
+        height="96">
+    </a>
+    <nav class="main-header__navigation main-nav">
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item site-list__item--current">
+            <a class="site-list__link" href="#">Главная</a>
+          </li>
+          <li class="site-list__item site-list__item">
+            <a class="site-list__link" href="./foto.html" target="_blank">Фото и видео</a>
+          </li>
+        </ul>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="./form.html" target="_blank">Форма отзыва</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="https://htmlacademy.ru" target="_blank">HTML ACADEMY</a>
+          </li>
+        </ul>
+      </div>
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+
+    </nav>
 
   </header>
+  <main class="main-content">
+    <section class="intro">
+      <h1 class="visually-hidden">Сайт городка Седона.</h1>
+      <img class="intro__image" src="img/content-images/welcome.svg"
+        alt="Welcome to the gorgeous Sedona. 'Because the Grand canyon sucks'." width="282" height="214">
+    </section>
+    <section class="advantages">
+      <h2 class="advantages-title">Седона — небольшой городок в Аризоне,
+        заслуживающий большего!</h2>
+      <p class="advantages-subtitle">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
+      <div class="advantages-card">
+        <div class="advantages-card-wrapper">
+          <h3 class="advantages-item-title">Настоящий городок</h3>
+          <span class="advantages-card-number">— №1 —</span>
+          <p class="advantages-card-subtitle">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+        </div>
+        <img class="advantages-image" src="images/images-content/photo-advantage-1-min.jpg"
+          alt="Здания в городке Седона." width="800" height="384">
+      </div>
+      <ul class="advantages-list-additional">
+        <li class="advantages-item advantages-item-additional advantages-item-additional-housing">
+          <h3 class="advantages-item-title">Жильё</h3>
+          <p class="advantages-item-subtitle">Рекомендуем пожить<br>в настоящем мотеле,<br>всё как в кино!</p>
+        </li>
+        <li class="advantages-item advantages-item-additional advantages-item-additional-food">
+          <h3 class="advantages-item-title">Еда</h3>
+          <p class="advantages-item-subtitle">Всегда заказывайте<br>топовый фирменный бургер, вы не разочаруетесь!
+          </p>
+        </li>
+        <li class="advantages-item advantages-item-additional advantages-item-additional-souvenirs">
+          <h3 class="advantages-item-title">Сувениры</h3>
+          <p class="advantages-item-subtitle">Не только китайского,<br>но и настоящего местного производства!</p>
+        </li>
+      </ul>
+      <div class="advantages-card">
+        <img class="advantages-image" src="images/images-content/photo-advantage-2-min.jpg"
+          alt="Скала, похожая на мост." width="800" height="384">
+        <div class="advantages-card-wrapper">
+          <h3 class="advantages-item-title">Там есть мост&nbsp;дьявола</h3>
+          <span class="advantages-card-number">— №2 —</span>
+          <p class="advantages-card-subtitle">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+        </div>
+      </div>
+      <ul class="advantages-list">
+        <li class="advantages-item">
+          <h3 class="advantages-item-title">Небольшая площадь</h3>
+          <span class="advantages-card-number">— №3 —</span>
+          <p class="advantages-item-subtitle">Все достопримечательности находятся очень близко</p>
+        </li>
+        <li class="advantages-item">
+          <h3 class="advantages-item-title">Красивая<br>дорога</h3>
+          <span class="advantages-card-number">— №4 —</span>
+          <p class="advantages-item-subtitle">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        </li>
+        <li class="advantages-item">
+          <h3 class="advantages-item-title">Мало<br>туристов</h3>
+          <span class="advantages-card-number">— №5 —</span>
+          <p class="advantages-item-subtitle">Большинство едет в Гранд Каньон и толпится там</p>
+        </li>
+      </ul>
+    </section>
+    <section class="booking">
+      <h2 class="booking-title">Заинтересовались?</h2>
+      <p class="booking-subtitle">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения
+        гостиниц в Седоне
+      </p>
+      <a class="button booking-button" href="#">Поиск гостиницы в Седоне</a>
+    </section>
+    <section class="map">
+      <h2 class="visually-hidden">Седона на карте.</h2>
+      <div class="map__wrapper" style="position:relative;overflow:hidden;"><a
+          href="https://yandex.ru/maps?utm_medium=mapframe&utm_source=maps"
+          style="color:#eee;font-size:12px;position:absolute;top:0px;">Яндекс Карты</a><a
+          href="https://yandex.ru/maps/?ll=-112.892982%2C34.853693&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoyMjQwMjg5OTA3EjpVbml0ZWQgU3RhdGVzIG9mIEFtZXJpY2EsIEFyaXpvbmEsIENvY29uaW5vIENvdW50eSwgU2Vkb25hIgoNOIXfwhVeegtC&utm_medium=mapframe&utm_source=maps&z=7.47"
+          style="color:#eee;font-size:12px;position:absolute;top:14px;">Седона — Яндекс Карты</a><iframe
+          src="https://yandex.ru/map-widget/v1/-/CCUfVBSbLD" width="320" height="350" frameborder="1"
+          allowfullscreen="true" style="position:relative;"></iframe></div>
+    </section>
+  </main>
 
   <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a
       href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p>
