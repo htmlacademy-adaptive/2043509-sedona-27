@@ -1,0 +1,21 @@
+@use "../global/bootstrap.scss";
+
+.page {
+  font-family: bootstrap.$font-name;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.page__body {
+  min-width: 320px;
+  max-width: 760px;
+  color: #000000;
+  background-color: #ffffff;
+  margin: 0 auto;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.page__footer {
+  margin: auto;
+}
