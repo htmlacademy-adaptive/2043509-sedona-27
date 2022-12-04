@@ -1,5 +1,8 @@
 @use "./global/bootstrap.scss";
+@use "./blocks/visually-hidden.scss";
 @use "./blocks/page.scss";
 @use "./blocks/page-body.scss";
 @use "./blocks/main-header.scss";
 @use "./blocks/main-nav.scss";
+@use "./blocks/pop-up-menu.scss";
+@use "./blocks/site-list.scss";

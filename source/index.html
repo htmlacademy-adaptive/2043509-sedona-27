@@ -15,7 +15,7 @@
         height="96">
     </a>
     <nav class="main-header__navigation main-nav">
-      <div class="main-nav__wrapper">
+      <div class="main-nav__wrapper pop-up-menu">
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--current">
             <a class="site-list__link" href="#">Главная</a>
@@ -23,8 +23,6 @@
           <li class="site-list__item">
             <a class="site-list__link" href="catalog.html">Фото и видео</a>
           </li>
-        </ul>
-        <ul class="main-nav__list site-list">
           <li class="site-list__item">
             <a class="site-list__link" href="form.html">Форма отзыва</a>
           </li>
@@ -32,9 +30,12 @@
             <a class="site-list__link" href="https://htmlacademy.ru" target="_blank">HTML ACADEMY</a>
           </li>
         </ul>
+        <button class="pop-up-menu__button-close visually-hidden">
+          <span class="visually-hidden">Закрыть меню.</span>
+        </button>
       </div>
       <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
+        <span class="visually-hidden">Открыть меню.</span>
       </button>
     </nav>
   </header>
@@ -108,11 +109,11 @@
     </section>
     <section class="map">
       <h2 class="visually-hidden">Седона на карте.</h2>
-      <div class="map__wrapper" style="position:relative;overflow:hidden;">
+      <div class="map__wrapper" style="position: relative; overflow: hidden;">
         <a href="https://yandex.ru/maps?utm_medium=mapframe&utm_source=maps"
-          style="color:#eee;font-size:12px;position:absolute;top:0px;">Яндекс Карты</a>
+          style="color:#eee; font-size: 12px; position: absolute; top: 0;">Яндекс Карты</a>
         <a href="https://yandex.ru/maps/?ll=-112.892982%2C34.853693&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoyMjQwMjg5OTA3EjpVbml0ZWQgU3RhdGVzIG9mIEFtZXJpY2EsIEFyaXpvbmEsIENvY29uaW5vIENvdW50eSwgU2Vkb25hIgoNOIXfwhVeegtC&utm_medium=mapframe&utm_source=maps&z=7.47"
-          style="color:#eee;font-size:12px;position:absolute;top:14px;">Седона — Яндекс Карты</a>
+          style="color:#eee; font-size:12px;position:absolute;top:14px;">Седона — Яндекс Карты</a>
         <iframe src="https://yandex.ru/map-widget/v1/-/CCUfVBSbLD" width="320" height="350" allow="fullscreen"
           style="position:relative;"></iframe>
       </div>
@@ -151,6 +152,7 @@
       </div>
     </div>
   </footer>
+  <script src="./js/index.js"></script>
 </body>
 
 </html>

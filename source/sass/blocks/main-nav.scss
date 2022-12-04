@@ -1,4 +1,25 @@
 .main-nav {
   display: flex;
-  flex-direction: column;
+}
+
+.main-nav__wrapper {
+  position: relative;
+}
+
+.main-nav__list {
+  width: 100%;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  background-color: inherit;
+  background-image: url("../img/svg/menu-icon.svg");
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  display: flex;
+  border: none;
+  cursor: pointer;
 }
