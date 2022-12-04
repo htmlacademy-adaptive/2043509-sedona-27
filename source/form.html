@@ -8,32 +8,33 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header">
-    <a class="main-header__logo" href="index.html">
-      <img class="main-header__logo-image" src="./img/svg/logo-icon.svg" alt="Логотип сайта Седона." width="185"
+  <header class="page-body__header main-header">
+    <a class="main-header__logo main-header-logo" href="index.html">
+      <img class="main-header-logo__image" src="./img/svg/logo-icon.svg" alt="Логотип сайта Седона." width="185"
         height="96">
     </a>
     <nav class="main-header__navigation main-nav">
-      <div class="main-nav__wrapper">
+      <div class="main-nav__wrapper pop-up-menu">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a class="site-list__link" href="index.html">Главная</a>
+            <a class="site-list__link" href="#">Главная</a>
           </li>
           <li class="site-list__item">
             <a class="site-list__link" href="catalog.html">Фото и видео</a>
           </li>
-        </ul>
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--current">
-            <a class="site-list__link" href="#">Форма отзыва</a>
+          <li class="site-list__item site-list__item--margin-left">
+            <a class="site-list__link site-list__link--current" href="form.html">Форма отзыва</a>
           </li>
           <li class="site-list__item">
             <a class="site-list__link" href="https://htmlacademy.ru" target="_blank">HTML ACADEMY</a>
           </li>
         </ul>
+        <button class="pop-up-menu__button-close visually-hidden">
+          <span class="visually-hidden">Закрыть меню.</span>
+        </button>
       </div>
       <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
+        <span class="visually-hidden">Открыть меню.</span>
       </button>
     </nav>
   </header>
