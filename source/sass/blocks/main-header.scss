@@ -1,5 +1,9 @@
 .main-header {
   padding: 17px 20px;
+
+  @media screen and (min-width: 768px) {
+    padding: 2px 20px;
+  }
 }
 
 .main-header__navigation {
@@ -11,4 +15,5 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 1;
 }

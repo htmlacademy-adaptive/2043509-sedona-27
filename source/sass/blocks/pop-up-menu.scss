@@ -2,6 +2,11 @@
 
 .pop-up-menu {
   display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    width: 100%;
+  }
 }
 
 .pop-up-menu--is-open {
@@ -26,4 +31,8 @@
   background-color: bootstrap.$main-color;
   background-image: url("../../img/svg/icon-cross.svg");
   cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
