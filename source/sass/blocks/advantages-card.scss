@@ -24,13 +24,14 @@
 
     &::before {
       content: "";
+      display: flex;
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
       top: 0;
       background-color: #ffffff;
       background-repeat: no-repeat;
-      width: 768px;
+      width: 100vw;
       height: 37px;
       clip-path: polygon(50% 100%, 0 0, 100% 0);
 
