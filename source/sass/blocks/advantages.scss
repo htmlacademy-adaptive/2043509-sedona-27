@@ -57,10 +57,7 @@
 .advantages__card-image {
   display: flex;
   width: 100%;
-
-  @media screen and (min-width: bootstrap.$tablet-width) {
-    flex-grow: 2;
-  }
+  object-fit: cover;
 }
 
 .advantages__bonuses-list-wrapper {
@@ -80,4 +77,8 @@
   margin: 0 auto;
   background-color: #eeeeee;
   width: 100%;
+
+  @media screen and (min-width: bootstrap.$tablet-width) {
+    padding: 0;
+  }
 }

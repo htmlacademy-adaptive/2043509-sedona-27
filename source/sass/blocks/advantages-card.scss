@@ -7,6 +7,18 @@
   background-color: bootstrap.$main-color;
   color: #ffffff;
 
+  @media screen and (min-width: bootstrap.$tablet-width) {
+    padding: 42px 33px 41px;
+
+    &--reverse {
+      order: 2;
+    }
+  }
+
+  @media screen and (min-width: bootstrap.$desktop-width) {
+    padding: 52px 50px 51px;
+  }
+
   &--decorated {
     padding-top: 70px;
 
@@ -34,21 +46,25 @@
 
   &--without-image {
     padding: 24px 8px 24px 8px;
-  }
 
-  @media screen and (min-width: bootstrap.$tablet-width) {
-    padding: 42px 33px 41px;
+    @media screen and (min-width: bootstrap.$tablet-width) {
+      padding: 52px 33px;
+    }
 
-    &--reverse {
-      order: 2;
+    @media screen and (min-width: bootstrap.$desktop-width) {
+      padding: 52px 50px;
     }
   }
 
-  @media screen and (min-width: bootstrap.$desktop-width) {
-    padding: 52px 50px 51px;
+  &--little-padding {
+    @media screen and (min-width: bootstrap.$tablet-width) {
+      padding: 41px 33px;
+    }
+
+    @media screen and (min-width: bootstrap.$desktop-width) {
+      padding: 52px 50px;
+    }
   }
-
-
 }
 
 .advantages-card__title {
@@ -60,12 +76,16 @@
   font-weight: 700;
   text-transform: uppercase;
 
-  &--without-image {
-    color: #000000;
-  }
-
   @media screen and (min-width: bootstrap.$tablet-width) {
     max-width: 185px;
+  }
+
+  &--without-image {
+    color: #000000;
+
+    @media screen and (min-width: bootstrap.$tablet-width) {
+      max-width: 130px;
+    }
   }
 }
 
@@ -87,10 +107,6 @@
   max-width: 284px;
   text-transform: uppercase;
 
-  &--without-image {
-    color: #333333;
-  }
-
   @media screen and (min-width: bootstrap.$tablet-width) {
     max-width: 190px;
   }
@@ -99,7 +115,25 @@
     max-width: 260px;
 
     &--reverse {
-      max-width: 196px;
+      max-width: 220px;
+    }
+  }
+
+  &--without-image {
+    color: #333333;
+
+    @media screen and (min-width: bootstrap.$desktop-width) {
+      max-width: 280px;
+    }
+  }
+
+  &--little-padding {
+    @media screen and (min-width: bootstrap.$tablet-width) {
+      max-width: 180px;
+    }
+
+    @media screen and (min-width: bootstrap.$desktop-width) {
+      max-width: 280px;
     }
   }
 }

@@ -59,5 +59,9 @@
 
   @media screen and (min-width: bootstrap.$desktop-width) {
     max-width: 300px;
+
+    &--souvenirs {
+      max-width: 196px;
+    }
   }
 }
