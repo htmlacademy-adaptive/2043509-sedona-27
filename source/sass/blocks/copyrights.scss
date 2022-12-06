@@ -1,0 +1,27 @@
+@use "../global/bootstrap.scss";
+
+.copyrights {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.copyrights__text {
+  color: #000000;
+  text-transform: uppercase;
+  margin-right: 12px;
+}
+
+.copyrights__link {
+  text-decoration: none;
+  color: #000000;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.copyrights__image {
+  color: #000000;
+}
