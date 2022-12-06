@@ -3,7 +3,7 @@
 .pop-up-menu {
   display: none;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: bootstrap.$tablet-width) {
     display: flex;
     width: 100%;
   }
@@ -32,7 +32,7 @@
   background-image: url("../img/svg/icon-cross.svg");
   cursor: pointer;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: bootstrap.$tablet-width) {
     display: none;
   }
 }

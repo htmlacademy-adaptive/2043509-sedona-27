@@ -19,7 +19,7 @@
   border: none;
   cursor: pointer;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: bootstrap.$tablet-width) {
     display: none;
   }
 }
