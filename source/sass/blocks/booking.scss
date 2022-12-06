@@ -1,0 +1,58 @@
+@use "./global/bootstrap.scss";
+
+.booking {
+  padding: 38px 18px 49px;
+
+  @media screen and (min-width: bootstrap.$tablet-width) {
+    padding: 61px 18px 58px;
+  }
+
+  @media screen and (min-width: bootstrap.$desktop-width) {
+    padding-bottom: 66px;
+  }
+}
+
+.booking__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.booking__heading {
+  text-align: center;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  max-width: 260px;
+  margin: 0 0 30px;
+
+  @media screen and (min-width: bootstrap.$tablet-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.booking__subtitle {
+  text-transform: uppercase;
+  max-width: 262px;
+  margin: 0 0 32px;
+  text-align: center;
+
+  @media screen and (min-width: bootstrap.$tablet-width) {
+    margin-bottom: 35px;
+    max-width: 435px;
+  }
+
+  @media screen and (min-width: bootstrap.$desktop-width) {
+    margin-bottom: 45px;
+  }
+}
+
+.booking__button {
+  width: 284px;
+
+  @media screen and (min-width: bootstrap.$tablet-width) {
+    width: 435px;
+  }
+}

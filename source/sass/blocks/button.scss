@@ -1,0 +1,18 @@
+@use "./global/bootstrap.scss";
+
+.button {
+  background-color: bootstrap.$main-color;
+  padding: 16px 49px 16px 49px;
+  color: #ffffff;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}

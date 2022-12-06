@@ -22,4 +22,3 @@ const closePopUp = function () {
 
 openPopUp();
 closePopUp();
-

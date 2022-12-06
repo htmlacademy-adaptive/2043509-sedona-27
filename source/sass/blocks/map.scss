@@ -1,0 +1,9 @@
+@use "./global/bootstrap.scss";
+
+.map__frame {
+  display: flex;
+  width: 100%;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
