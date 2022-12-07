@@ -30,10 +30,9 @@
       transform: translateX(-50%);
       top: 0;
       background-color: #ffffff;
-      background-repeat: no-repeat;
       width: 100vw;
       height: 37px;
-      clip-path: polygon(50% 100%, 0 0, 100% 0);
+      clip-path: polygon(50% 100%, -65% 0, 165% 0);
 
       @media screen and (min-width: bootstrap.$tablet-width) {
         display: none;

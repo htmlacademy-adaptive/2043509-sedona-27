@@ -6,8 +6,8 @@
   padding: 90px 0 85px;
   background-image: url("../img/decoration-images/intro-background.jpg");
   background-repeat: no-repeat;
+  background-position: top;
   background-size: cover;
-  background-position: center;
   background-color: bootstrap.$main-color;
   overflow: hidden;
 
@@ -28,8 +28,26 @@
     background-image: url("../img/decoration-images/intro-triangle.svg");
     background-repeat: no-repeat;
     background-position: center;
-    width: 100vw;
+    width: 100%;
+    background-size: cover;
     height: 57px;
+  }
+
+  &--feedback {
+    background-image: url("../../img/decoration-images/intro-background-feedback.jpg");
+    background-position: bottom;
+    background-size: 282%;
+    padding: 52px 0 67px;
+
+    @media screen and (min-width: bootstrap.$tablet-width) {
+      padding: 95px 0 117px;
+      background-size: 156%;
+    }
+
+    @media screen and (min-width: bootstrap.$desktop-width) {
+      padding: 101px 0 120px;
+      background-size: 100%;
+    }
   }
 }
 
@@ -40,5 +58,17 @@
   @media screen and (min-width: bootstrap.$tablet-width) {
     width: 460px;
     height: 350px;
+  }
+
+  &--feedback {
+    @media screen and (min-width: bootstrap.$tablet-width) {
+      width: 457px;
+      height: 78px;
+    }
+
+    @media screen and (min-width: bootstrap.$desktop-width) {
+      width: 458px;
+      height: 80px;
+    }
   }
 }
