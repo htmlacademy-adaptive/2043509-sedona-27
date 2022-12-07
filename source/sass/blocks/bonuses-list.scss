@@ -1,0 +1,67 @@
+@use "../global/bootstrap.scss";
+
+.bonuses-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @media screen and (min-width: bootstrap.$tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
+}
+
+.bonuses-list__item {
+  max-width: 284px;
+  padding: 8px 0 0 47px;
+
+  &:last-child {
+    margin-bottom: 25px;
+
+    @media screen and (min-width: bootstrap.$tablet-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: bootstrap.$tablet-width) {
+    text-align: center;
+    padding: 158px 33px 60px;
+  }
+}
+
+.bonuses-list__title {
+  margin: 0 0 16px 0;
+  max-width: 237px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @media screen and (min-width: bootstrap.$tablet-width) {
+    max-width: 190px;
+  }
+
+  @media screen and (min-width: bootstrap.$desktop-width) {
+    max-width: 300px;
+  }
+}
+
+.bonuses-list__subtitle {
+  margin: 0;
+  max-width: 237px;
+  text-transform: uppercase;
+  color: #333333;
+
+  @media screen and (min-width: bootstrap.$tablet-width) {
+    max-width: 190px;
+  }
+
+  @media screen and (min-width: bootstrap.$desktop-width) {
+    max-width: 300px;
+
+    &--souvenirs {
+      max-width: 196px;
+    }
+  }
+}

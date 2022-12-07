@@ -1,0 +1,140 @@
+@use "../global/bootstrap.scss";
+
+.advantages-card {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 37px 18px 40px;
+  background-color: bootstrap.$main-color;
+  color: #ffffff;
+
+  @media screen and (min-width: bootstrap.$tablet-width) {
+    padding: 42px 33px 41px;
+
+    &--reverse {
+      order: 2;
+    }
+  }
+
+  @media screen and (min-width: bootstrap.$desktop-width) {
+    padding: 52px 50px 51px;
+  }
+
+  &--decorated {
+    padding-top: 70px;
+
+    &::before {
+      content: "";
+      display: flex;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      background-color: #ffffff;
+      background-repeat: no-repeat;
+      width: 100vw;
+      height: 37px;
+      clip-path: polygon(50% 100%, 0 0, 100% 0);
+
+      @media screen and (min-width: bootstrap.$tablet-width) {
+        display: none;
+      }
+    }
+
+    @media screen and (min-width: bootstrap.$tablet-width) {
+      padding-top: 42px;
+    }
+  }
+
+  &--without-image {
+    padding: 24px 8px 24px 8px;
+
+    @media screen and (min-width: bootstrap.$tablet-width) {
+      padding: 52px 33px;
+    }
+
+    @media screen and (min-width: bootstrap.$desktop-width) {
+      padding: 52px 50px;
+    }
+  }
+
+  &--little-padding {
+    @media screen and (min-width: bootstrap.$tablet-width) {
+      padding: 41px 33px;
+    }
+
+    @media screen and (min-width: bootstrap.$desktop-width) {
+      padding: 52px 50px;
+    }
+  }
+}
+
+.advantages-card__title {
+  margin: 0 auto 11px;
+  text-align: center;
+  max-width: 284px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @media screen and (min-width: bootstrap.$tablet-width) {
+    max-width: 185px;
+  }
+
+  &--without-image {
+    color: #000000;
+
+    @media screen and (min-width: bootstrap.$tablet-width) {
+      max-width: 130px;
+    }
+  }
+}
+
+.advantages-card__number {
+  display: block;
+  margin: 0 auto 17px;
+  text-align: center;
+  max-width: 284px;
+  text-transform: uppercase;
+
+  &--without-image {
+    color: #333333;
+  }
+}
+
+.advantages-card__subtitle {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 284px;
+  text-transform: uppercase;
+
+  @media screen and (min-width: bootstrap.$tablet-width) {
+    max-width: 190px;
+  }
+
+  @media screen and (min-width: bootstrap.$desktop-width) {
+    max-width: 260px;
+
+    &--reverse {
+      max-width: 220px;
+    }
+  }
+
+  &--without-image {
+    color: #333333;
+
+    @media screen and (min-width: bootstrap.$desktop-width) {
+      max-width: 280px;
+    }
+  }
+
+  &--little-padding {
+    @media screen and (min-width: bootstrap.$tablet-width) {
+      max-width: 180px;
+    }
+
+    @media screen and (min-width: bootstrap.$desktop-width) {
+      max-width: 280px;
+    }
+  }
+}

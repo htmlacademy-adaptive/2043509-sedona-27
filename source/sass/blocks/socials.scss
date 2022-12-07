@@ -1,0 +1,26 @@
+@use "../global/bootstrap.scss";
+
+.socials {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 48px);
+  gap: 6px;
+  max-width: 210px;
+}
+
+.socials__item {
+  background-color: bootstrap.$main-color;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.socials__link {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+}

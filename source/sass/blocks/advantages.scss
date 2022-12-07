@@ -1,0 +1,84 @@
+@use "../global/bootstrap.scss";
+
+.advantages {
+  display: flex;
+  flex-direction: column;
+}
+
+.advantages__heading {
+  margin: 32px auto 35px;
+  text-align: center;
+  max-width: 284px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  @media screen and (min-width: bootstrap.$tablet-width) {
+    margin-top: 48px;
+    max-width: 520px;
+  }
+}
+
+.advantages__description {
+  color: #333333;
+  margin: 0 auto 16px;
+  text-align: center;
+  max-width: 284px;
+  text-transform: uppercase;
+
+  @media screen and (min-width: bootstrap.$tablet-width) {
+    max-width: 520px;
+    margin-bottom: 55px;
+  }
+
+  @media screen and (min-width: bootstrap.$desktop-width) {
+    margin-bottom: 44px;
+  }
+}
+
+.advantages__card-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  @media screen and (min-width: bootstrap.$tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    &--reverse {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+}
+
+.advantages__card-image {
+  display: flex;
+  width: 100%;
+  object-fit: cover;
+}
+
+.advantages__bonuses-list-wrapper {
+  box-sizing: border-box;
+  padding: 23px 18px 46px;
+  margin: 0 auto;
+
+  @media screen and (min-width: bootstrap.$tablet-width) {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+.advantages__cards-list {
+  box-sizing: border-box;
+  padding: 0 18px 4px;
+  margin: 0 auto;
+  background-color: #eeeeee;
+  width: 100%;
+
+  @media screen and (min-width: bootstrap.$tablet-width) {
+    padding: 0;
+  }
+}

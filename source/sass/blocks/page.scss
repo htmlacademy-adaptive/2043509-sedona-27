@@ -1,0 +1,11 @@
+@use "../global/bootstrap.scss";
+
+.page {
+  font-family: bootstrap.$font-name;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.page__body {
+  margin: 0 auto;
+}

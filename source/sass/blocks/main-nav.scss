@@ -1,0 +1,27 @@
+@use "../global/bootstrap.scss";
+
+.main-nav {
+  display: flex;
+}
+
+.main-nav__wrapper {
+  position: relative;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  background-color: inherit;
+  background-image: url("../img/svg/menu-icon.svg");
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  display: flex;
+  border: none;
+  cursor: pointer;
+
+  @media screen and (min-width: bootstrap.$tablet-width) {
+    display: none;
+  }
+}
