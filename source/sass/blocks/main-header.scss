@@ -3,7 +3,7 @@
 .main-header {
   padding: 17px 0;
 
-  @media screen and (min-width: bootstrap.$tablet-width) {
+  @include bootstrap.tablet {
     padding: 2px 0;
   }
 }

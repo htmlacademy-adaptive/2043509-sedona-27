@@ -7,7 +7,7 @@
   background-color: bootstrap.$main-color;
   color: #ffffff;
 
-  @media screen and (min-width: bootstrap.$tablet-width) {
+  @include bootstrap.tablet {
     padding: 42px 33px 41px;
 
     &--reverse {
@@ -15,7 +15,7 @@
     }
   }
 
-  @media screen and (min-width: bootstrap.$desktop-width) {
+  @include bootstrap.desktop {
     padding: 52px 50px 51px;
   }
 
@@ -34,12 +34,12 @@
       height: 37px;
       clip-path: polygon(50% 100%, -65% 0, 165% 0);
 
-      @media screen and (min-width: bootstrap.$tablet-width) {
+      @include bootstrap.tablet {
         display: none;
       }
     }
 
-    @media screen and (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.tablet {
       padding-top: 42px;
     }
   }
@@ -47,21 +47,21 @@
   &--without-image {
     padding: 24px 8px 24px 8px;
 
-    @media screen and (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.tablet {
       padding: 52px 33px;
     }
 
-    @media screen and (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.desktop {
       padding: 52px 50px;
     }
   }
 
   &--little-padding {
-    @media screen and (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.tablet {
       padding: 41px 33px;
     }
 
-    @media screen and (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.desktop {
       padding: 52px 50px;
     }
   }
@@ -76,14 +76,14 @@
   font-weight: 700;
   text-transform: uppercase;
 
-  @media screen and (min-width: bootstrap.$tablet-width) {
+  @include bootstrap.tablet {
     max-width: 185px;
   }
 
   &--without-image {
     color: #000000;
 
-    @media screen and (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.tablet {
       max-width: 130px;
     }
   }
@@ -107,11 +107,11 @@
   max-width: 284px;
   text-transform: uppercase;
 
-  @media screen and (min-width: bootstrap.$tablet-width) {
+  @include bootstrap.tablet {
     max-width: 190px;
   }
 
-  @media screen and (min-width: bootstrap.$desktop-width) {
+  @include bootstrap.desktop {
     max-width: 260px;
 
     &--reverse {
@@ -122,17 +122,17 @@
   &--without-image {
     color: #333333;
 
-    @media screen and (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.desktop {
       max-width: 280px;
     }
   }
 
   &--little-padding {
-    @media screen and (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.tablet {
       max-width: 180px;
     }
 
-    @media screen and (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.desktop {
       max-width: 280px;
     }
   }
