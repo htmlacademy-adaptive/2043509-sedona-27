@@ -1,6 +1,7 @@
 @use "../global/bootstrap.scss";
 
 .button {
+  font-family: bootstrap.$font-name;
   background-color: bootstrap.$main-color;
   padding: 16px 49px 16px 49px;
   color: #ffffff;

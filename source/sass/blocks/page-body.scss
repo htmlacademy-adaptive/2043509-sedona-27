@@ -9,6 +9,7 @@
   flex-direction: column;
   min-width: 320px;
   max-width: 767px;
+  margin: 0 auto;
 
   @media screen and (min-width: bootstrap.$tablet-width) {
     min-width: 768px;

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="page__body page-body">
+<body class="page-body">
   <header class="page-body__header main-header">
     <a class="main-header__logo main-header-logo" href="index.html">
       <img class="main-header-logo__image" src="./img/svg/logo-icon.svg" alt="Логотип сайта Седона." width="185"
@@ -30,12 +30,10 @@
             <a class="site-list__link" href="https://htmlacademy.ru" target="_blank">HTML ACADEMY</a>
           </li>
         </ul>
-        <button class="pop-up-menu__button-close visually-hidden">
-          <span class="visually-hidden">Закрыть меню.</span>
+        <button class="pop-up-menu__button-close visually-hidden" aria-label="Закрыть меню.">
         </button>
       </div>
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню.</span>
+      <button class="main-nav__toggle" type="button" aria-label="Открыть меню.">
       </button>
     </nav>
   </header>
@@ -46,8 +44,8 @@
     </div>
     <section class="feedback-heading">
       <h1 class="feedback-heading__title">Оставьте свой отзыв</h1>
-      <h2 class="feedback-heading__subtitle">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о
-        посещенных вами достопримечательностях</h2>
+      <p class="feedback-heading__subtitle">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о
+        посещенных вами достопримечательностях</p>
     </section>
     <section class="feedback">
       <h2 class="visually-hidden">Форма отзыва.</h2>
@@ -123,8 +121,10 @@
           <textarea class="feedback-form__text-area" name="emotions" cols="30" rows="10"
             placeholder="Опишите подробно все свои восторги "></textarea>
         </fieldset>
-        <button class="feedback-form__button button" type="submit">Отправить отзыв</button>
-        <span class="feedback-form__info-text"><sup class="star-required">*</sup> - Обязательные поля</span>
+        <div class="feedback-form__button-wrapper">
+          <button class="feedback-form__button button" type="submit">Отправить отзыв</button>
+          <span class="feedback-form__info-text"><sup class="star-required">*</sup> - Обязательные поля</span>
+        </div>
       </form>
     </section>
   </main>

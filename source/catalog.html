@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="page__body">
+<body class="page-body">
   <header class="page-body__header main-header">
     <a class="main-header__logo main-header-logo" href="index.html">
       <img class="main-header-logo__image" src="./img/svg/logo-icon.svg" alt="Логотип сайта Седона." width="185"
@@ -30,12 +30,10 @@
             <a class="site-list__link" href="https://htmlacademy.ru" target="_blank">HTML ACADEMY</a>
           </li>
         </ul>
-        <button class="pop-up-menu__button-close visually-hidden">
-          <span class="visually-hidden">Закрыть меню.</span>
+        <button class="pop-up-menu__button-close visually-hidden" aria-label="Закрыть меню.">
         </button>
       </div>
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню.</span>
+      <button class="main-nav__toggle" type="button" aria-label="Открыть меню.">
       </button>
     </nav>
   </header>
@@ -46,8 +44,8 @@
     <section class="photos">
       <div class="photos__heading">
         <h1 class="photos__title">Фото и видео</h1>
-        <h2 class="photos__subtitle">Не можете решиться на путешествие из-за курса? Фотографии помогут вам
-          забыть о политике и экономике.</h2>
+        <p class="photos__subtitle">Не можете решиться на путешествие из-за курса? Фотографии помогут вам
+          забыть о политике и экономике.</p>
       </div>
       <ul class="photos__list photo-list">
         <li class="photo-list__item photo-card">

@@ -117,3 +117,33 @@
     color: rgba(0, 0, 0, 0.3);
   }
 }
+
+.feedback-form__text-area {
+  padding: 16px;
+  background-color: #f2f2f2;
+  font-family: bootstrap.$font-name;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.3);
+  border: none;
+  box-sizing: border-box;
+  max-width: 280px;
+  resize: none;
+}
+
+.feedback-form__button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.feedback-form__button {
+  max-width: 280px;
+}
+
+.feedback-form__info-text {
+  display: flex;
+  color: rgba(51, 51, 51, 0.6);
+  text-transform: uppercase;
+}
