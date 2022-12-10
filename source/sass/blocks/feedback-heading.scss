@@ -11,6 +11,12 @@
   align-items: center;
   width: 320px;
   margin: 0 auto;
+
+  @include bootstrap.tablet {
+    width: 100%;
+    border: none;
+    padding: 64px 20px 51px;
+  }
 }
 
 .feedback-heading__title {
@@ -21,6 +27,11 @@
   margin: 0 0 24px;
   max-width: 280px;
   text-align: center;
+
+  @include bootstrap.tablet {
+    font-size: 30px;
+    max-width: 320px;
+  }
 }
 
 .feedback-heading__subtitle {
@@ -31,4 +42,8 @@
   margin: 0;
   max-width: 280px;
   text-align: center;
+
+  @include bootstrap.tablet {
+    max-width: 435px;
+  }
 }

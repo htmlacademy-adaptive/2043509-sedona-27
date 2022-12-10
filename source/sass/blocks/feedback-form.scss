@@ -5,6 +5,21 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 24px;
+
+  @include bootstrap.tablet {
+    padding: 51px 60px 64px;
+  }
+}
+
+.feedback-form__wrapper {
+  @include bootstrap.tablet {
+    width: 648px;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding-bottom: 63px;
+    border-bottom: 1px solid #e5e5e5;
+  }
 }
 
 .feedback-form__area {
@@ -16,23 +31,65 @@
   flex-direction: column;
   border-bottom: 1px solid #e5e5e5;
   min-width: 320px;
-  max-width: 767px;
+
+  @include bootstrap.tablet {
+    padding: 0 0 48px;
+  }
+
+  &--about-user {
+    @include bootstrap.tablet {
+      padding: 0 43px 0 0;
+      border-right: 1px solid #e5e5e5;
+      border-bottom: none;
+    }
+  }
 
   &--user-contacts {
     padding-bottom: 34px;
+
+    @include bootstrap.tablet {
+      padding: 0;
+      border-bottom: none;
+      align-items: center;
+      margin-left: 26px;
+      min-width: 280px;
+    }
   }
 
   &--impression {
     padding-bottom: 24px;
+
+    @include bootstrap.tablet {
+      min-width: 648px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 280px);
+      gap: 16px;
+      padding: 0 36px 48px;
+      margin: 0 auto;
+    }
   }
 
   &--visited-locations {
     padding-bottom: 24px;
+
+    @include bootstrap.tablet {
+      min-width: 648px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 224px);
+      column-gap: 32px;
+      row-gap: 16px;
+      padding: 0 84px 42px;
+      margin: 0 auto;
+    }
   }
 
   &--emotions {
     padding-bottom: 56px;
     border: none;
+
+    @include bootstrap.tablet {
+      width: 648px;
+    }
   }
 }
 
@@ -47,6 +104,15 @@
   text-transform: uppercase;
   text-align: center;
   max-width: 280px;
+
+  @include bootstrap.tablet {
+    padding-top: 0;
+  }
+
+  &--user-contacts {
+    margin: 0 0 20px 0;
+    text-align: left;
+  }
 }
 
 .feedback-form__label {
@@ -66,6 +132,11 @@
   &--email {
     padding-right: 58px;
     position: relative;
+
+    @include bootstrap.tablet {
+      padding-left: 18px;
+      width: 298px;
+    }
 
     &::after {
       content: "";
@@ -130,12 +201,23 @@
   box-sizing: border-box;
   max-width: 280px;
   resize: none;
+
+  @include bootstrap.tablet {
+    min-width: 648px;
+  }
 }
 
 .feedback-form__button-wrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+
+  @include bootstrap.tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 648px;
+  }
 }
 
 .feedback-form__button {
