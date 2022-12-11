@@ -53,13 +53,13 @@
         <div class="feedback-form__wrapper">
           <fieldset class="feedback-form__area feedback-form__area--about-user">
             <legend class="feedback-form__legend">Представьтесь:</legend>
-            <label class="feedback-form__label" for="name">
+            <label class="feedback-form__label feedback-form__label--about-user" for="name">
               <span class="feedback-form__label-text">Имя<sup class="star-required">*</sup>:</span>
               <input class="feedback-form__input" type="text" id="name" placeholder="Имя" required></label>
-            <label for="surname" class="feedback-form__label">
+            <label class="feedback-form__label feedback-form__label--about-user" for="surname">
               <span class="feedback-form__label-text">Фамилия<sup class="star-required">*</sup>:</span>
               <input class="feedback-form__input" type="text" id="surname" placeholder="Фамилия" required></label>
-            <label for="patronymic" class="feedback-form__label">
+            <label class="feedback-form__label feedback-form__label--about-user" for="patronymic">
               <span class="feedback-form__label-text">Отчество:</span>
               <input class="feedback-form__input" type="text" id="patronymic" placeholder="Отчество"></label>
           </fieldset>
@@ -69,7 +69,7 @@
               <span class="feedback-form__label-text">Контактный телефон<sup class="star-required">*</sup>:</span>
               <input class="feedback-form__input feedback-form__input" type="tel" id="phone"
                 placeholder="Введите телефон" required></label>
-            <label for="e-mail" class="feedback-form__label feedback-form__label--email">
+            <label class="feedback-form__label feedback-form__label--email" for="e-mail">
               <span class="feedback-form__label-text">Электронная почта<sup class="star-required">*</sup>:</span>
               <input class="feedback-form__input feedback-form__input" type="email" id="e-mail"
                 placeholder="Введите e-mail" required></label>
@@ -77,17 +77,23 @@
         </div>
         <fieldset class="feedback-form__area feedback-form__area--impression">
           <legend class="feedback-form__legend">Ваше Общее впечатление:</legend>
-          <label class="feedback-form__label feedback-form-control" for="positive">
+          <label
+            class="feedback-form__label feedback-form__label--impression feedback-form-control feedback-form-control--impression"
+            for="positive">
             <input class="feedback-form__input feedback-form-control__input feedback-form-control__input--radio"
               type="radio" id="positive" name="impression" value="positive" checked>
             <span class="feedback-form-control__mark feedback-form-control__mark--radio"></span>Скорее положительное
           </label>
-          <label class="feedback-form__label feedback-form-control" for="negative">
+          <label
+            class="feedback-form__label feedback-form__label--impression feedback-form-control feedback-form-control--impression"
+            for="negative">
             <input class="feedback-form__input feedback-form-control__input feedback-form-control__input--radio"
               type="radio" id="negative" name="impression" value="negative">
             <span class="feedback-form-control__mark feedback-form-control__mark--radio"></span>Скорее отрицательное
           </label>
-          <label class="feedback-form__label feedback-form-control" for="difficult-to-answer">
+          <label
+            class="feedback-form__label feedback-form__label--impression feedback-form-control feedback-form-control--impression"
+            for="difficult-to-answer">
             <input class="feedback-form__input feedback-form-control__input feedback-form-control__input--radio"
               type="radio" id="difficult-to-answer" name="impression" value="difficult-to-answer">
             <span class="feedback-form-control__mark feedback-form-control__mark--radio"></span>Затрудняюсь ответить
@@ -95,22 +101,30 @@
         </fieldset>
         <fieldset class="feedback-form__area feedback-form__area--visited-locations">
           <legend class="feedback-form__legend">Посещенные достопримечательности:</legend>
-          <label class="feedback-form__label feedback-form-control" for="bridge">
+          <label
+            class="feedback-form__label feedback-form__label--visited-locations feedback-form-control feedback-form-control--visited-locations"
+            for="bridge">
             <input class="feedback-form__input feedback-form-control__input feedback-form-control__input--checkbox"
               type="checkbox" id="bridge" name="visited-locations" value="bridge" checked>
             <span class="feedback-form-control__mark feedback-form-control__mark--checkbox"></span>Мост Дьявола
           </label>
-          <label class="feedback-form__label feedback-form-control" for="bell-mountain">
+          <label
+            class="feedback-form__label feedback-form__label--visited-locations feedback-form-control feedback-form-control--visited-locations"
+            for="bell-mountain">
             <input class="feedback-form__input feedback-form-control__input feedback-form-control__input--checkbox"
               type="checkbox" id="bell-mountain" name="visited-locations" value="bell-mountain" checked>
             <span class="feedback-form-control__mark feedback-form-control__mark--checkbox"></span>Гора-Колокол
           </label>
-          <label class="feedback-form__label feedback-form-control" for="slide-park">
+          <label
+            class="feedback-form__label feedback-form__label--visited-locations feedback-form-control feedback-form-control--visited-locations"
+            for="slide-park">
             <input class="feedback-form__input feedback-form-control__input feedback-form-control__input--checkbox"
               type="checkbox" id="slide-park" name="visited-locations" value="slide-park" checked>
             <span class="feedback-form-control__mark feedback-form-control__mark--checkbox"></span>Слайд-парк
           </label>
-          <label class="feedback-form__label feedback-form-control" for="red-mountains">
+          <label
+            class="feedback-form__label feedback-form__label--visited-locations feedback-form-control feedback-form-control--visited-locations"
+            for="red-mountains">
             <input class="feedback-form__input feedback-form-control__input feedback-form-control__input--checkbox"
               type="checkbox" id="red-mountains" name="visited-locations" value="red-mountains">
             <span class="feedback-form-control__mark feedback-form-control__mark--checkbox"></span>Красные скалы
