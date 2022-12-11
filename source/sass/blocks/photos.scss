@@ -7,5 +7,37 @@
 }
 
 .photos__heading {
-  width: 100%;
+  width: 320px;
+  padding: 30px 20px 17px;
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+  box-sizing: border-box;
+}
+
+.photos__title {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 0 37px;
+}
+
+.photos__subtitle {
+  text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 32px;
+}
+
+.photos__list {
+  margin: 0 0 17px;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.photos__item {
+  box-sizing: border-box;
+  padding: 24px 20px 25px;
+  border-bottom: 1px solid #e5e5e5;
 }

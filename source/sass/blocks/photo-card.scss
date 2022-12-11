@@ -1,0 +1,49 @@
+@use "../global/bootstrap.scss";
+
+.photo-card__link {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.photo-card__image {
+  display: flex;
+}
+
+.photo-card__caption-wrapper {
+  margin-bottom: 11px;
+}
+
+.photo-card__caption {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 0 15px;
+}
+
+.photo-card__author {
+  color: #333333;
+  margin: 0;
+}
+
+.photo-card__like-wrapper {
+  display: flex;
+  padding-bottom: 5px;
+  max-width: 80px;
+}
+
+.photo-card__like-quantity {
+  display: flex;
+  font-weight: 700;
+  padding-top: 5px;
+}
+
+.photo-card__like-button {
+  display: flex;
+  width: 23px;
+  height: 21px;
+  background-image: url("../img/svg/like-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 14px;
+}
