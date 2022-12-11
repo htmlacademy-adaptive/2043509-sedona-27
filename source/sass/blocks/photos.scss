@@ -1,0 +1,11 @@
+@use "../global/bootstrap.scss";
+
+.photos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photos__heading {
+  width: 100%;
+}

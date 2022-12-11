@@ -13,6 +13,12 @@
   color: #000000;
 }
 
+.feedback-form-control--visited-locations {
+  @include bootstrap.desktop {
+    padding-right: 0;
+  }
+}
+
 .feedback-form-control__input {
   width: 0;
   appearance: none;

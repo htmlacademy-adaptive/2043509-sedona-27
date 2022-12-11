@@ -21,7 +21,7 @@
     flex-wrap: wrap;
     box-sizing: border-box;
     padding-bottom: 63px;
-    border-bottom: 1px solid #e5e5e5;
+    border: none;
   }
 
   @include bootstrap.desktop {
@@ -31,17 +31,19 @@
 }
 
 .feedback-form__area {
+  position: relative;
   border: none;
   padding: 0 20px 39px;
   box-sizing: border-box;
   margin: 0;
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #e5e5e5;
   min-width: 320px;
+  border-bottom: 1px solid #e5e5e5;
 
   @include bootstrap.tablet {
     padding: 0 0 48px;
+    border: none;
   }
 
   &--about-user {
@@ -87,8 +89,11 @@
 
     @include bootstrap.desktop {
       width: 960px;
-      column-gap: 28px;
-      padding: 0 11px 56px 53px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0;
+      padding: 0 53px 56px 53px;
     }
   }
 
@@ -112,13 +117,12 @@
       flex-direction: row;
       align-items: center;
       gap: 0;
-      padding: 0 0 56px 44px;
+      padding: 0 44px 56px;
     }
   }
 
   &--emotions {
     padding-bottom: 56px;
-    border: none;
 
     @include bootstrap.tablet {
       width: 648px;
@@ -133,7 +137,7 @@
 
 .feedback-form__legend {
   display: block;
-  margin: 0 auto 20px;
+  margin: 0 auto 30px;
   padding: 24px 0 0;
   font-size: 18px;
   line-height: 26px;
@@ -141,10 +145,12 @@
   color: #000000;
   text-transform: uppercase;
   text-align: center;
-  max-width: 280px;
+  width: 280px;
 
   @include bootstrap.tablet {
     padding-top: 0;
+    transform: translateY(10px);
+    font-size: 21px;
   }
 
   &--user-contacts {
@@ -156,6 +162,42 @@
       text-align: center;
       margin-left: 93px;
     }
+  }
+}
+
+.feedback-form__legend--decorated::after {
+  @include bootstrap.tablet {
+    content: "";
+    position: absolute;
+    width: 123px;
+    height: 1px;
+    background-color: #dbdbdb;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -184px;
+  }
+
+  @include bootstrap.desktop {
+    width: 280px;
+    right: -340px;
+  }
+}
+
+.feedback-form__legend--decorated::before {
+  @include bootstrap.tablet {
+    content: "";
+    position: absolute;
+    width: 123px;
+    height: 1px;
+    background-color: #dbdbdb;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -184px;
+  }
+
+  @include bootstrap.desktop {
+    width: 280px;
+    left: -340px;
   }
 }
 
@@ -219,11 +261,26 @@
       background-image: url("");
     }
   }
+}
 
-  &--impression {
-    @include bootstrap.tablet {
-      margin-bottom: 0;
+.feedback-form__label--impression {
+  @include bootstrap.tablet {
+    margin-bottom: 0;
+  }
+
+  @include bootstrap.desktop {
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 16px;
     }
+  }
+}
+
+.feedback-form__label--impression:nth-of-type(3n) {
+  @include bootstrap.desktop {
+    width: 238px;
+    padding-right: 0;
   }
 }
 
@@ -235,7 +292,7 @@
   @include bootstrap.desktop {
     min-width: 153px;
     width: initial;
-    margin: 0 54px 16px 0;
+    margin: 0 64px 16px 0;
   }
 
   &:last-child {

@@ -2,6 +2,7 @@
 @use "./blocks/visually-hidden.scss";
 @use "./blocks/page.scss";
 @use "./blocks/page-body.scss";
+@use "./blocks/page-catalog-container.scss";
 @use "./blocks/main-header.scss";
 @use "./blocks/main-nav.scss";
 @use "./blocks/pop-up-menu.scss";
@@ -22,3 +23,4 @@
 @use "./blocks/feedback-form.scss";
 @use "./blocks/star-required.scss";
 @use "./blocks/feedback-form-control.scss";
+@use "./blocks/photos.scss";
