@@ -1,0 +1,66 @@
+@use "../global/bootstrap.scss";
+
+.feedback-form-control {
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 10px 10px 62px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: none;
+  color: #000000;
+}
+
+.feedback-form-control--visited-locations {
+  @include bootstrap.desktop {
+    padding-right: 0;
+  }
+}
+
+.feedback-form-control__input {
+  width: 0;
+  appearance: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+.feedback-form-control__input[type="radio"]:checked {
+  & + .feedback-form-control__mark {
+    &::before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: #000000;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.feedback-form-control__input[type="checkbox"]:checked {
+  & + .feedback-form-control__mark {
+    background-image: url("../img/svg/checkbox.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.feedback-form-control__mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  background-color: #f2f2f2;
+  display: flex;
+
+  &--radio {
+    border-radius: 50%;
+  }
+}

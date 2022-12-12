@@ -14,7 +14,7 @@
   align-items: center;
   padding: 38px 82px 23px;
 
-  @media screen and (min-width: bootstrap.$tablet-width) {
+  @include bootstrap.tablet {
     padding: 36px 76px 36px 45px;
     flex-direction: row;
     flex-wrap: wrap;
@@ -22,7 +22,7 @@
     width: 100%;
   }
 
-  @media screen and (min-width: bootstrap.$desktop-width) {
+  @include bootstrap.desktop {
     padding: 36px 136px 36px 104px;
   }
 }
@@ -37,7 +37,7 @@
   margin-bottom: 34px;
   max-width: 180px;
 
-  @media screen and (min-width: bootstrap.$tablet-width) {
+  @include bootstrap.tablet {
     margin-bottom: 0;
   }
 }
@@ -45,12 +45,12 @@
 .main-footer__socials {
   margin-bottom: 40px;
 
-  @media screen and (min-width: bootstrap.$tablet-width) {
+  @include bootstrap.tablet {
     margin-bottom: 0;
     padding-right: 3px;
   }
 
-  @media screen and (min-width: bootstrap.$tablet-width) {
+  @include bootstrap.desktop {
     padding-right: 2px;
   }
 }

@@ -14,7 +14,7 @@
   font-weight: 700;
   text-transform: uppercase;
 
-  @media screen and (min-width: bootstrap.$tablet-width) {
+  @include bootstrap.tablet {
     margin-top: 48px;
     max-width: 520px;
   }
@@ -27,12 +27,12 @@
   max-width: 284px;
   text-transform: uppercase;
 
-  @media screen and (min-width: bootstrap.$tablet-width) {
+  @include bootstrap.tablet {
     max-width: 520px;
     margin-bottom: 55px;
   }
 
-  @media screen and (min-width: bootstrap.$desktop-width) {
+  @include bootstrap.desktop {
     margin-bottom: 44px;
   }
 }
@@ -44,7 +44,7 @@
   flex-direction: column;
   margin: 0 auto;
 
-  @media screen and (min-width: bootstrap.$tablet-width) {
+  @include bootstrap.tablet {
     display: grid;
     grid-template-columns: 1fr 2fr;
 
@@ -65,7 +65,7 @@
   padding: 23px 18px 46px;
   margin: 0 auto;
 
-  @media screen and (min-width: bootstrap.$tablet-width) {
+  @include bootstrap.tablet {
     padding: 0;
     width: 100%;
   }
@@ -78,7 +78,7 @@
   background-color: #eeeeee;
   width: 100%;
 
-  @media screen and (min-width: bootstrap.$tablet-width) {
+  @include bootstrap.tablet {
     padding: 0;
   }
 }

@@ -9,13 +9,14 @@
   flex-direction: column;
   min-width: 320px;
   max-width: 767px;
+  margin: 0 auto;
 
-  @media screen and (min-width: bootstrap.$tablet-width) {
+  @include bootstrap.tablet {
     min-width: 768px;
     max-width: 1200px;
   }
 
-  @media screen and (min-width: bootstrap.$desktop-width) {
+  @include bootstrap.desktop {
     width: 1200px;
   }
 }

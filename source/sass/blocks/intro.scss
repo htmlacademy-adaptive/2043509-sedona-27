@@ -6,16 +6,16 @@
   padding: 90px 0 85px;
   background-image: url("../img/decoration-images/intro-background.jpg");
   background-repeat: no-repeat;
+  background-position: top;
   background-size: cover;
-  background-position: center;
   background-color: bootstrap.$main-color;
   overflow: hidden;
 
-  @media screen and (min-width: bootstrap.$tablet-width) {
+  @include bootstrap.tablet {
     padding: 77px 0 91px;
   }
 
-  @media screen and (min-width: bootstrap.$desktop-width) {
+  @include bootstrap.desktop {
     padding: 78px 0 90px;
   }
 
@@ -28,8 +28,26 @@
     background-image: url("../img/decoration-images/intro-triangle.svg");
     background-repeat: no-repeat;
     background-position: center;
-    width: 100vw;
+    width: 100%;
+    background-size: cover;
     height: 57px;
+  }
+
+  &--not-index-page {
+    background-image: url("../img/decoration-images/intro-background-feedback.jpg");
+    background-position: bottom;
+    background-size: 282%;
+    padding: 52px 0 67px;
+
+    @include bootstrap.tablet {
+      padding: 95px 0 117px;
+      background-size: 156%;
+    }
+
+    @include bootstrap.desktop {
+      padding: 101px 0 120px;
+      background-size: 100%;
+    }
   }
 }
 
@@ -37,8 +55,20 @@
   display: flex;
   margin: 0 auto;
 
-  @media screen and (min-width: bootstrap.$tablet-width) {
+  @include bootstrap.tablet {
     width: 460px;
     height: 350px;
+  }
+
+  &--not-index-page {
+    @include bootstrap.tablet {
+      width: 457px;
+      height: 78px;
+    }
+
+    @include bootstrap.desktop {
+      width: 458px;
+      height: 80px;
+    }
   }
 }

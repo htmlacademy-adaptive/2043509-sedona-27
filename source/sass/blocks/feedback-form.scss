@@ -1,0 +1,383 @@
+@use "../global/bootstrap.scss";
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 24px;
+
+  @include bootstrap.tablet {
+    padding: 51px 60px 64px;
+  }
+
+  @include bootstrap.desktop {
+    padding: 33px 120px 64px;
+  }
+}
+
+.feedback-form__wrapper {
+  @include bootstrap.tablet {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding-bottom: 63px;
+    border: none;
+  }
+
+  @include bootstrap.desktop {
+    width: 960px;
+    padding-bottom: 71px;
+  }
+}
+
+.feedback-form__area {
+  position: relative;
+  border: none;
+  padding: 0 20px 39px;
+  box-sizing: border-box;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  border-bottom: 1px solid #e5e5e5;
+
+  @include bootstrap.tablet {
+    padding: 0 0 48px;
+    border: none;
+  }
+
+  &--about-user {
+    @include bootstrap.tablet {
+      padding: 0 43px 0 0;
+      border-right: 1px solid #e5e5e5;
+      border-bottom: none;
+    }
+
+    @include bootstrap.desktop {
+      padding: 0 63px 0 0;
+      width: 493px;
+    }
+  }
+
+  &--user-contacts {
+    padding-bottom: 34px;
+
+    @include bootstrap.tablet {
+      padding: 0;
+      border-bottom: none;
+      align-items: center;
+      margin-left: 26px;
+      min-width: 280px;
+    }
+
+    @include bootstrap.desktop {
+      margin-left: 0;
+    }
+  }
+
+  &--impression {
+    padding-bottom: 24px;
+
+    @include bootstrap.tablet {
+      min-width: 648px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 280px);
+      gap: 16px;
+      padding: 0 36px 48px;
+      margin: 0 auto;
+    }
+
+    @include bootstrap.desktop {
+      width: 960px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0;
+      padding: 0 53px 56px 53px;
+    }
+  }
+
+  &--visited-locations {
+    padding-bottom: 24px;
+
+    @include bootstrap.tablet {
+      min-width: 648px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 224px);
+      column-gap: 32px;
+      row-gap: 16px;
+      padding: 0 84px 42px;
+      margin: 0 auto;
+    }
+
+    @include bootstrap.desktop {
+      width: 960px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      gap: 0;
+      padding: 0 44px 56px;
+    }
+  }
+
+  &--emotions {
+    padding-bottom: 56px;
+
+    @include bootstrap.tablet {
+      width: 648px;
+    }
+
+    @include bootstrap.desktop {
+      width: 960px;
+      padding: 0 96px 48px;
+    }
+  }
+}
+
+.feedback-form__legend {
+  display: block;
+  margin: 0 auto 30px;
+  padding: 24px 0 0;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+  width: 280px;
+
+  @include bootstrap.tablet {
+    padding-top: 0;
+    transform: translateY(10px);
+    font-size: 21px;
+  }
+
+  &--user-contacts {
+    @include bootstrap.tablet {
+      text-align: left;
+    }
+
+    @include bootstrap.desktop {
+      text-align: center;
+      margin-left: 93px;
+    }
+  }
+}
+
+.feedback-form__legend--decorated::after {
+  @include bootstrap.tablet {
+    content: "";
+    position: absolute;
+    width: 123px;
+    height: 1px;
+    background-color: #dbdbdb;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -184px;
+  }
+
+  @include bootstrap.desktop {
+    width: 280px;
+    right: -340px;
+  }
+}
+
+.feedback-form__legend--decorated::before {
+  @include bootstrap.tablet {
+    content: "";
+    position: absolute;
+    width: 123px;
+    height: 1px;
+    background-color: #dbdbdb;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -184px;
+  }
+
+  @include bootstrap.desktop {
+    width: 280px;
+    left: -340px;
+  }
+}
+
+.feedback-form__label {
+  color: #333333;
+  text-transform: uppercase;
+  display: flex;
+  flex-wrap: wrap;
+  width: 280px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+
+  &--about-user {
+    @include bootstrap.desktop {
+      width: 430px;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--phone,
+  &--email {
+    padding-right: 58px;
+    position: relative;
+
+    @include bootstrap.tablet {
+      padding-left: 18px;
+      width: 298px;
+    }
+
+    @include bootstrap.desktop {
+      width: 467px;
+      padding-left: 64px;
+    }
+
+    &::after {
+      content: "";
+      display: flex;
+      width: 58px;
+      height: 58px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: #e6e6e6;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 2;
+    }
+  }
+
+  &--phone {
+    &::after {
+      background-image: url("");
+    }
+  }
+
+  &--email {
+    &::after {
+      background-image: url("");
+    }
+  }
+}
+
+.feedback-form__label--impression {
+  @include bootstrap.tablet {
+    margin-bottom: 0;
+  }
+
+  @include bootstrap.desktop {
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.feedback-form__label--impression:nth-of-type(3n) {
+  @include bootstrap.desktop {
+    width: 238px;
+    padding-right: 0;
+  }
+}
+
+.feedback-form__label--visited-locations {
+  @include bootstrap.tablet {
+    width: 224px;
+  }
+
+  @include bootstrap.desktop {
+    min-width: 153px;
+    width: initial;
+    margin: 0 64px 16px 0;
+  }
+
+  &:last-child {
+    @include bootstrap.desktop {
+      margin: 0 0 16px;
+    }
+  }
+}
+
+.feedback-form__label-text {
+  padding: 0 0 0 16px;
+  display: flex;
+  width: 200px;
+}
+
+.feedback-form__input {
+  background-color: #f2f2f2;
+  border: none;
+  font-family: bootstrap.$font-name;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+  padding: 16px;
+  width: 100%;
+  margin: 0;
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.feedback-form__text-area {
+  padding: 16px;
+  background-color: #f2f2f2;
+  font-family: bootstrap.$font-name;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.3);
+  border: none;
+  box-sizing: border-box;
+  max-width: 280px;
+  resize: none;
+
+  @include bootstrap.tablet {
+    min-width: 648px;
+  }
+
+  @include bootstrap.desktop {
+    max-width: 960px;
+  }
+}
+
+.feedback-form__button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  @include bootstrap.tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 648px;
+  }
+
+  @include bootstrap.desktop {
+    width: 768px;
+  }
+}
+
+.feedback-form__button {
+  width: 280px;
+
+  @include bootstrap.tablet {
+    width: 324px;
+  }
+
+  @include bootstrap.desktop {
+    width: 384px;
+  }
+}
+
+.feedback-form__info-text {
+  display: flex;
+  color: rgba(51, 51, 51, 0.6);
+  text-transform: uppercase;
+}
