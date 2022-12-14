@@ -33,10 +33,12 @@
       width: 100vw;
       height: 37px;
       clip-path: polygon(50% 100%, -65% 0, 165% 0);
+    }
+  }
 
-      @include bootstrap.tablet {
-        display: none;
-      }
+  .advantages-card--decorated::before {
+    @include bootstrap.tablet {
+      display: none;
     }
 
     @include bootstrap.tablet {
