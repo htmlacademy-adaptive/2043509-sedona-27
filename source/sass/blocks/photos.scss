@@ -4,6 +4,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 17px;
+
+  @include bootstrap.tablet {
+    padding-bottom: 58px;
+  }
+
+  @include bootstrap.desktop {
+    padding-bottom: 62px;
+  }
 }
 
 .photos__heading {
@@ -51,7 +60,7 @@
 }
 
 .photos__list {
-  margin: 0 0 17px;
+  margin: 0;
   padding: 0;
   list-style-type: none;
   display: flex;
@@ -61,11 +70,6 @@
     display: grid;
     width: 100%;
     grid-template-columns: repeat(auto-fit, minmax(324px, 1fr));
-    margin-bottom: 58px;
-  }
-
-  @include bootstrap.desktop {
-    margin-bottom: 62px;
   }
 }
 
