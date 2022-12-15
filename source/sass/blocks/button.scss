@@ -17,4 +17,23 @@
   cursor: pointer;
   box-sizing: border-box;
   border: none;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    pointer-events: none;
+    background-color: #e5e5e5;
+  }
+
+  &--disabled {
+    pointer-events: none;
+    background-color: #e5e5e5;
+  }
 }
