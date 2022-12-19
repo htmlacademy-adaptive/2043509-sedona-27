@@ -1,15 +1,13 @@
 @use "../global/bootstrap.scss";
 
 .main-header {
-  padding: 17px 0;
-
   @include bootstrap.tablet {
     padding: 2px 0;
   }
 }
 
 .main-header__navigation {
-  min-height: 22px;
+  min-height: 56px;
 }
 
 .main-header__logo {

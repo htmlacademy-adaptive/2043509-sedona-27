@@ -1,0 +1,127 @@
+@use "../global/bootstrap.scss";
+
+.modal__success,
+.modal__failure {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 5;
+
+  &--is-open {
+    display: flex;
+  }
+}
+
+.modal__wrapper {
+  position: absolute;
+  width: 320px;
+  top: 402px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+
+  @include bootstrap.tablet {
+    width: 640px;
+    top: 162px;
+  }
+
+  @include bootstrap.desktop {
+    top: 145px;
+  }
+
+  &--failure {
+    top: 116px;
+    padding-bottom: 35px;
+
+    @include bootstrap.tablet {
+      width: 400px;
+      top: 283px;
+      padding-bottom: 49px;
+    }
+
+    @include bootstrap.desktop {
+      top: 244px;
+    }
+  }
+}
+
+.modal__text-wrapper {
+  padding: 36px 39px 57px 37px;
+  text-align: center;
+
+  @include bootstrap.tablet {
+    padding: 52px 99px 29px 97px;
+  }
+
+  &--failure {
+    padding: 45px 42px 28px 41px;
+
+    @include bootstrap.tablet {
+      padding: 38px 47px 14px 46px;
+    }
+  }
+}
+
+.modal__title {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 0 37px;
+
+  @include bootstrap.tablet {
+    font-size: 30px;
+  }
+
+  &--failure {
+    @include bootstrap.tablet {
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+}
+
+.modal__subtitle {
+  color: #333333;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.modal__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #f2f2f2;
+  padding: 20px;
+  box-sizing: border-box;
+
+  @include bootstrap.tablet {
+    padding: 44px;
+  }
+}
+
+.modal__button {
+  &--success {
+    width: 280px;
+
+    @include bootstrap.tablet {
+      width: 458px;
+    }
+  }
+
+  &--failure {
+    width: 180px;
+
+    @include bootstrap.tablet {
+      width: 272px;
+    }
+  }
+}

@@ -21,7 +21,19 @@
   border: none;
   cursor: pointer;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @include bootstrap.tablet {
     display: none;
   }
+}
+
+.main-nav__toggle--no-js {
+  display: none;
 }

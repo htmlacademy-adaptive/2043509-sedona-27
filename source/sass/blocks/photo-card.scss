@@ -1,16 +1,85 @@
 @use "../global/bootstrap.scss";
 
+.photo-card {
+  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+
+  @include bootstrap.tablet {
+    border-bottom: none;
+    background-color: #f2f2f2;
+  }
+}
+
+.photo-card:nth-of-type(4n-1) {
+  @include bootstrap.tablet {
+    background-color: #eaeaea;
+  }
+}
+
+.photo-card--full-viewport {
+  @include bootstrap.tablet {
+    grid-column: 1/-1;
+  }
+}
+
 .photo-card__link {
   display: flex;
   margin-bottom: 15px;
+
+  @include bootstrap.tablet {
+    width: 100%;
+    margin-bottom: 0;
+  }
 }
 
 .photo-card__image {
   display: flex;
+  object-fit: cover;
+
+  @include bootstrap.tablet {
+    width: 100%;
+    height: 267px;
+  }
+}
+
+.photo-card__image--full-viewport {
+  @include bootstrap.tablet {
+    height: 400px;
+  }
+}
+
+.photo-card__container {
+  @include bootstrap.tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 20px 15px;
+  }
+
+  @include bootstrap.desktop {
+    position: absolute;
+    padding: 17px 20px 17px 25px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.photo-card__container--full-viewport {
+  @include bootstrap.desktop {
+    padding: 22px 20px 15px 21px;
+  }
 }
 
 .photo-card__caption-wrapper {
   margin-bottom: 11px;
+
+  @include bootstrap.tablet {
+    margin: 0;
+  }
 }
 
 .photo-card__caption {
@@ -18,12 +87,20 @@
   line-height: 21px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0 0 15px;
+  margin: 0 0 1px;
+
+  @include bootstrap.desktop {
+    color: #ffffff;
+  }
 }
 
 .photo-card__author {
   color: #333333;
   margin: 0;
+
+  @include bootstrap.desktop {
+    color: #ffffff;
+  }
 }
 
 .photo-card__like-wrapper {
@@ -42,8 +119,14 @@
   display: flex;
   width: 23px;
   height: 21px;
-  background-image: url("../img/svg/like-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
   margin-right: 14px;
+  color: #000000;
+  opacity: 0.3;
+
+  @include bootstrap.desktop {
+    color: #ffffff;
+    opacity: 1;
+  }
 }

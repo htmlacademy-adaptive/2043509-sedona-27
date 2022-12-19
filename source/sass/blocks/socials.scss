@@ -10,16 +10,11 @@
   max-width: 210px;
 }
 
-.socials__item {
-  background-color: bootstrap.$main-color;
-  padding: 6px;
-  box-sizing: border-box;
-}
-
 .socials__link {
   display: flex;
-  width: 36px;
-  height: 36px;
+  background-color: bootstrap.$main-color;
+  width: 48px;
+  height: 48px;
   text-decoration: none;
   justify-content: center;
   align-items: center;

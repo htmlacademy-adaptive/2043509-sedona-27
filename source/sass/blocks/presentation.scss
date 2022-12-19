@@ -1,0 +1,89 @@
+@use "../global/bootstrap.scss";
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 17px;
+
+  @include bootstrap.tablet {
+    padding: 0;
+  }
+
+  @include bootstrap.desktop {
+    padding-bottom: 44px;
+  }
+}
+
+.presentation__title {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+  margin: 0 0 29px 0;
+  max-width: 280px;
+  text-align: center;
+
+  @include bootstrap.tablet {
+    font-size: 30px;
+    max-width: 446px;
+  }
+}
+
+.presentation__subtitle {
+  color: #000000;
+  text-transform: uppercase;
+  margin: 0 0 38px 0;
+  max-width: 270px;
+  text-align: center;
+
+  @include bootstrap.tablet {
+    margin-bottom: 65px;
+    max-width: 446px;
+  }
+
+  @include bootstrap.desktop {
+    margin-bottom: 63px;
+  }
+}
+
+.presentation__video-wrapper {
+  position: relative;
+  display: flex;
+}
+
+.presentation__video {
+  background-image: url("../img/decoration-images/video-preview.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include bootstrap.tablet {
+    width: 648px;
+    height: 500px;
+  }
+
+  @include bootstrap.desktop {
+    width: 800px;
+  }
+}
+
+.presentation__play-video-button {
+  width: 48px;
+  height: 54px;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background-image: url("../img/decoration-images/play-video-icon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: transparent;
+  z-index: 2;
+}

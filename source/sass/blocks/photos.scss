@@ -4,6 +4,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 17px;
+
+  @include bootstrap.tablet {
+    padding-bottom: 58px;
+  }
+
+  @include bootstrap.desktop {
+    padding-bottom: 62px;
+  }
 }
 
 .photos__heading {
@@ -12,32 +21,64 @@
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
   box-sizing: border-box;
+
+  @include bootstrap.tablet {
+    min-width: 468px;
+    border: none;
+    padding: 61px 20px 31px;
+  }
+
+  @include bootstrap.desktop {
+    padding-top: 100px;
+  }
 }
 
 .photos__title {
-  font-size: 21px;
+  font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
   margin: 0 0 37px;
+
+  @include bootstrap.tablet {
+    font-size: 30px;
+  }
 }
 
 .photos__subtitle {
   text-transform: uppercase;
   margin: 0;
-  padding-bottom: 32px;
+  padding-bottom: 30px;
+
+  @include bootstrap.tablet {
+    margin-bottom: 62px;
+  }
+
+  @include bootstrap.desktop {
+    margin-bottom: 69px;
+  }
 }
 
 .photos__list {
-  margin: 0 0 17px;
+  margin: 0;
   padding: 0;
   list-style-type: none;
   display: flex;
   flex-direction: column;
+
+  @include bootstrap.tablet {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(324px, 1fr));
+  }
 }
 
 .photos__item {
   box-sizing: border-box;
   padding: 24px 20px 25px;
-  border-bottom: 1px solid #e5e5e5;
+
+  @include bootstrap.tablet {
+    padding: 0;
+    width: 100%;
+  }
 }

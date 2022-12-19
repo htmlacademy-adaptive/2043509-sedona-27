@@ -4,6 +4,8 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+  display: grid;
+  gap: 25px;
 
   @include bootstrap.tablet {
     display: grid;
@@ -14,15 +16,8 @@
 
 .bonuses-list__item {
   max-width: 284px;
-  padding: 8px 0 0 47px;
-
-  &:last-child {
-    margin-bottom: 25px;
-
-    @include bootstrap.tablet {
-      margin-bottom: 0;
-    }
-  }
+  padding: 0 0 0 47px;
+  position: relative;
 
   @include bootstrap.tablet {
     text-align: center;
@@ -30,8 +25,52 @@
   }
 }
 
+.bonuses-list__item::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  @include bootstrap.tablet {
+    width: 80px;
+    height: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60px;
+  }
+
+  @include bootstrap.desktop {
+    top: 69px;
+  }
+}
+
+
+.bonuses-list__item--housing {
+  &::before {
+    background-image: url("../img/svg/icon-house.svg");
+  }
+}
+
+.bonuses-list__item--food {
+  &::before {
+    background-image: url("../img/svg/icon-burger.svg");
+  }
+}
+
+.bonuses-list__item--souvenirs {
+  &::before {
+    background-image: url("../img/svg/icon-gift.svg");
+  }
+}
+
+
 .bonuses-list__title {
-  margin: 0 0 16px 0;
+  margin: 8px 0 16px 0;
   max-width: 237px;
   font-size: 18px;
   line-height: 26px;

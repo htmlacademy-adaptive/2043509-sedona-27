@@ -19,31 +19,6 @@
     padding: 52px 50px 51px;
   }
 
-  &--decorated {
-    padding-top: 70px;
-
-    &::before {
-      content: "";
-      display: flex;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      top: 0;
-      background-color: #ffffff;
-      width: 100vw;
-      height: 37px;
-      clip-path: polygon(50% 100%, -65% 0, 165% 0);
-
-      @include bootstrap.tablet {
-        display: none;
-      }
-    }
-
-    @include bootstrap.tablet {
-      padding-top: 42px;
-    }
-  }
-
   &--without-image {
     padding: 24px 8px 24px 8px;
 
@@ -63,6 +38,36 @@
 
     @include bootstrap.desktop {
       padding: 52px 50px;
+    }
+  }
+}
+
+.advantages-card--decorated {
+  padding-top: 70px;
+
+
+  @include bootstrap.tablet {
+    padding-top: 42px;
+  }
+
+  @include bootstrap.tablet {
+    padding-top: 52px;
+  }
+
+  &::before {
+    content: "";
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    background-color: #ffffff;
+    width: 100vw;
+    height: 37px;
+    clip-path: polygon(50% 100%, -65% 0, 165% 0);
+
+    @include bootstrap.tablet {
+      display: none;
     }
   }
 }
