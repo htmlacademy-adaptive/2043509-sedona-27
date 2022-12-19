@@ -25,10 +25,21 @@
 .photo-card__link {
   display: block;
   margin-bottom: 15px;
+  transition-property: box-shadow;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
 
   @include bootstrap.tablet {
     width: 100%;
     margin-bottom: 0;
+  }
+
+  &:hover {
+    box-shadow: 2px 0 10px 2px rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    box-shadow: 2px 0 10px 2px rgba(129, 179, 210, 0.8);
   }
 }
 
@@ -128,5 +139,13 @@
   @include bootstrap.desktop {
     color: #ffffff;
     opacity: 1;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

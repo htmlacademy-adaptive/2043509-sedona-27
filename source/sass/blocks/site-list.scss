@@ -86,6 +86,7 @@
 
     &--current {
       color: #766357;
+      pointer-events: none;
     }
 
     &:hover {

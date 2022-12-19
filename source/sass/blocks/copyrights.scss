@@ -7,12 +7,6 @@
   justify-content: center;
 }
 
-.copyrights__text {
-  color: #000000;
-  text-transform: uppercase;
-  margin-right: 12px;
-}
-
 .copyrights__link {
   text-decoration: none;
   color: #000000;
@@ -20,8 +14,22 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+
+  &:hover {
+    color: #81b3d2;
+  }
+
+  &:active {
+    color: #b3b3b3;
+  }
+}
+
+.copyrights__text {
+  color: inherit;
+  text-transform: uppercase;
+  margin-right: 12px;
 }
 
 .copyrights__image {
-  color: #000000;
+  color: inherit;
 }

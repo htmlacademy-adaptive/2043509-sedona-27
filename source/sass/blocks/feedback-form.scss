@@ -323,6 +323,16 @@
   &::placeholder {
     color: rgba(0, 0, 0, 0.3);
   }
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:active {
+    background-color: #ffffff;
+    box-shadow: inset 0 0 0 4px #e5e5e5;
+    outline: none;
+  }
 }
 
 .feedback-form__text-area {

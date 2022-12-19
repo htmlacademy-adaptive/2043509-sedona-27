@@ -100,4 +100,12 @@
   background-size: cover;
   background-color: transparent;
   z-index: 2;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }

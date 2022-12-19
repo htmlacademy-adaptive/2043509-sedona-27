@@ -68,3 +68,19 @@
     border-radius: 4px;
   }
 }
+
+.feedback-form-control__input:hover ~ .feedback-form-control__mark {
+  background-color: #e5e5e5;
+}
+
+.feedback-form-control__input:active ~ .feedback-form-control__mark {
+  background-color: #d5d5d5;
+}
+
+.feedback-form-control__input:focus ~ .feedback-form-control__mark {
+  outline: 2px solid #000000;
+}
+
+.feedback-form-control__input[type="radio"]:checked:active ~ .feedback-form-control__mark::before {
+  background-color: rgba(51, 51, 51, 0.3);
+}
