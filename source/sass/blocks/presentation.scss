@@ -54,18 +54,32 @@
 }
 
 .presentation__video {
-  background-image: url("../img/decoration-images/video-preview.jpg");
+  background-image: url("../img/decoration-images/video-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
+  @media screen and (min-resolution: 2dppx) {
+    background-image: url("../img/decoration-images/video-mobile@2x.jpg");
+  }
+
   @include bootstrap.tablet {
+    background-image: url("../img/decoration-images/video-tablet@1x.jpg");
     width: 648px;
     height: 500px;
+
+    @media screen and (min-resolution: 2dppx) {
+      background-image: url("../img/decoration-images/video-tablet@2x.jpg");
+    }
   }
 
   @include bootstrap.desktop {
+    background-image: url("../img/decoration-images/video-desktop@1x.jpg");
     width: 800px;
+
+    @media screen and (min-resolution: 2dppx) {
+      background-image: url("../img/decoration-images/video-desktop@2x.jpg");
+    }
   }
 }
 

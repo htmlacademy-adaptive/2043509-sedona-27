@@ -4,19 +4,34 @@
   width: 100%;
   position: relative;
   padding: 90px 0 85px;
-  background-image: url("../img/decoration-images/intro-background.jpg");
+  background-image: url("../img/decoration-images/back-intro-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: center;
   background-size: cover;
   background-color: bootstrap.$main-color;
   overflow: hidden;
 
+  @media screen and (min-resolution: 2dppx) {
+    background-image: url("../img/decoration-images/back-intro-mobile@2x.jpg");
+  }
+
   @include bootstrap.tablet {
     padding: 77px 0 91px;
+    background-image: url("../img/decoration-images/back-intro-tablet@1x.jpg");
+    height: auto;
+
+    @media screen and (min-resolution: 2dppx) {
+      background-image: url("../img/decoration-images/back-intro-tablet@2x.jpg");
+    }
   }
 
   @include bootstrap.desktop {
     padding: 78px 0 90px;
+    background-image: url("../img/decoration-images/back-intro-desktop@1x.jpg");
+
+    @media screen and (min-resolution: 2dppx) {
+      background-image: url("../img/decoration-images/back-intro-desktop@2x.jpg");
+    }
   }
 
   &::after {
@@ -34,19 +49,15 @@
   }
 
   &--not-index-page {
-    background-image: url("../img/decoration-images/intro-background-feedback.jpg");
     background-position: bottom;
-    background-size: 282%;
     padding: 52px 0 67px;
 
     @include bootstrap.tablet {
       padding: 95px 0 117px;
-      background-size: 156%;
     }
 
     @include bootstrap.desktop {
       padding: 101px 0 120px;
-      background-size: 100%;
     }
   }
 }

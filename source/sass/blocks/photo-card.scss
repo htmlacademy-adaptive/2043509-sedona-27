@@ -23,7 +23,7 @@
 }
 
 .photo-card__link {
-  display: flex;
+  display: block;
   margin-bottom: 15px;
 
   @include bootstrap.tablet {
