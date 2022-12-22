@@ -79,15 +79,18 @@
     color: rgba(255, 255, 255, 0.3);
   }
 
+  &--current {
+    pointer-events: none;
+
+    @include bootstrap.tablet {
+      color: #766357;
+    }
+  }
+
   @include bootstrap.tablet {
     font-size: 14px;
     line-height: 21px;
     padding: 18px 4px 17px;
-
-    &--current {
-      color: #766357;
-      pointer-events: none;
-    }
 
     &:hover {
       background-color: transparent;
