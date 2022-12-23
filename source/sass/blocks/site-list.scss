@@ -61,7 +61,7 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  padding: 17px 20px 14px;
+  padding: 17px 20px 13px;
   width: 100%;
   color: inherit;
   font-size: 18px;
@@ -79,14 +79,18 @@
     color: rgba(255, 255, 255, 0.3);
   }
 
+  &--current {
+    pointer-events: none;
+
+    @include bootstrap.tablet {
+      color: #766357;
+    }
+  }
+
   @include bootstrap.tablet {
     font-size: 14px;
     line-height: 21px;
     padding: 18px 4px 17px;
-
-    &--current {
-      color: #766357;
-    }
 
     &:hover {
       background-color: transparent;

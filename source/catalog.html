@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Седона, фотографии.</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico"><!-- 32×32 -->
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
+  <link rel="manifest" href="../manifest.webmanifest">
 </head>
 
 <body class="page-body">
@@ -15,6 +19,7 @@
         height="96">
     </a>
     <nav class="main-header__navigation main-nav">
+      <!-- При отключенном js отображается меню мобильной версии в потоке за счет модификатора no-js -->
       <div class="main-nav__wrapper pop-up-menu pop-up-menu--no-js">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
@@ -33,6 +38,7 @@
         <button class="pop-up-menu__button-close visually-hidden" aria-label="Закрыть меню.">
         </button>
       </div>
+      <!-- При отключенном js скрывается кнопка бургерного меню за счет модификатора no-js -->
       <button class="main-nav__toggle main-nav__toggle--no-js" type="button" aria-label="Открыть меню.">
       </button>
     </nav>
@@ -51,8 +57,22 @@
       <ul class="photos__list">
         <li class="photos__item photo-card photo-card--full-viewport">
           <a class="photo-card__link" href="#" target="_blank">
-            <img class="photo-card__image photo-card__image--full-viewport" src="img/content-images/photo-1-desktop.jpg"
-              alt="Шоссе, уходящее вдаль к закатному солнцу среди гор." width="280" height="280">
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)"
+                srcset="img/content-images/photo-1-desktop@2x.webp 2x, img/content-images/photo-1-desktop@1x.webp 1x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/content-images/photo-1-tablet@2x.webp 2x, img/content-images/photo-1-tablet@1x.webp 1x">
+              <source type="image/webp"
+                srcset="img/content-images/photo-1-mobile@2x.webp 2x, img/content-images/photo-1-mobile@1x.webp 1x">
+              <source media="(min-width: 1200px)"
+                srcset="img/content-images/photo-1-desktop@2x.jpg 2x, img/content-images/photo-1-desktop@1x.jpg 1x">
+              <source media="(min-width: 768px)"
+                srcset="img/content-images/photo-1-tablet@2x.jpg 2x, img/content-images/photo-1-tablet@1x.jpg 1x">
+              <img class="photo-card__image photo-card__image--full-viewport"
+                src="img/content-images/photo-1-mobile@1x.jpg"
+                srcset="img/content-images/photo-1-mobile@2x.jpg 2x, img/content-images/photo-1-mobile@1x.jpg 1x"
+                alt="Шоссе, уходящее вдаль к закатному солнцу среди гор." width="280" height="280">
+            </picture>
           </a>
           <div class="photo-card__container photo-card__container--full-viewport">
             <div class="photo-card__caption-wrapper">
@@ -60,10 +80,9 @@
               <p class="photo-card__author">Автор фото: Борис</p>
             </div>
             <span class="photo-card__like-wrapper">
-              <a href="" class="photo-card__like-button">
-                <svg width="23" height="21" viewBox="0 0 23 21" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" />
+              <a href="" class="photo-card__like-button" aria-label="Поставить лайк.">
+                <svg width="23" height="21" role="img" focusable="false">
+                  <use href="img/svg/sprite.svg#icon-like"></use>
                 </svg>
               </a>
               <span class="photo-card__like-quantity">1350</span>
@@ -72,8 +91,15 @@
         </li>
         <li class="photos__item photo-card">
           <a class="photo-card__link" href="#" target="_blank">
-            <img class="photo-card__image" src="img/content-images/photo-2-desktop.jpg"
-              alt="Цветущий кактус крупным планом, на заднем фоне размытый горный хребет." width="280" height="280">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/content-images/photo-2-desktop@2x.jpg 2x, img/content-images/photo-2-desktop@1x.jpg 1x">
+              <source media="(min-width: 768px)"
+                srcset="img/content-images/photo-2-tablet@2x.jpg 2x, img/content-images/photo-2-tablet@1x.jpg 1x">
+              <img class="photo-card__image" src="img/content-images/photo-2-mobile@1x.jpg"
+                srcset="img/content-images/photo-2-mobile@2x.jpg 2x, img/content-images/photo-2-mobile@1x.jpg 1x"
+                alt="Цветущий кактус крупным планом, на заднем фоне размытый горный хребет." width="280" height="280">
+            </picture>
           </a>
           <div class="photo-card__container">
             <div class="photo-card__caption-wrapper">
@@ -81,10 +107,9 @@
               <p class="photo-card__author">Автор фото: Сергей</p>
             </div>
             <span class="photo-card__like-wrapper">
-              <a href="" class="photo-card__like-button">
-                <svg width="23" height="21" viewBox="0 0 23 21" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" />
+              <a href="" class="photo-card__like-button" aria-label="Поставить лайк.">
+                <svg width="23" height="21" role="img" focusable="false">
+                  <use href="img/svg/sprite.svg#icon-like"></use>
                 </svg>
               </a>
               <span class="photo-card__like-quantity">143</span>
@@ -93,8 +118,16 @@
         </li>
         <li class="photos__item photo-card">
           <a class="photo-card__link" href="#" target="_blank">
-            <img class="photo-card__image" src="img/content-images/photo-3-desktop.jpg"
-              alt="Дорога-серпантин, снятая с высоты, среди множества деревьев вокруг холма." width="280" height="280">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/content-images/photo-3-desktop@2x.jpg 2x, img/content-images/photo-3-desktop@1x.jpg 1x">
+              <source media="(min-width: 768px)"
+                srcset="img/content-images/photo-3-tablet@2x.jpg 2x, img/content-images/photo-3-tablet@1x.jpg 1x">
+              <img class="photo-card__image" src="img/content-images/photo-3-mobile@1x.jpg"
+                srcset="img/content-images/photo-3-mobile@2x.jpg 2x, img/content-images/photo-3-mobile@1x.jpg 1x"
+                alt="Дорога-серпантин, снятая с высоты, среди множества деревьев вокруг холма." width="280"
+                height="280">
+            </picture>
           </a>
           <div class="photo-card__container">
             <div class="photo-card__caption-wrapper">
@@ -102,10 +135,9 @@
               <p class="photo-card__author">Автор фото: Петр</p>
             </div>
             <span class="photo-card__like-wrapper">
-              <a href="" class="photo-card__like-button">
-                <svg width="23" height="21" viewBox="0 0 23 21" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" />
+              <a href="" class="photo-card__like-button" aria-label="Поставить лайк.">
+                <svg width="23" height="21" role="img" focusable="false">
+                  <use href="img/svg/sprite.svg#icon-like"></use>
                 </svg>
               </a>
               <span class="photo-card__like-quantity">96</span>
@@ -114,8 +146,15 @@
         </li>
         <li class="photos__item photo-card">
           <a class="photo-card__link" href="#" target="_blank">
-            <img class="photo-card__image" src="img/content-images/photo-4-desktop.jpg"
-              alt="Узкий перешеек между двумя скалами, напоминающий по виду мост." width="280" height="280">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/content-images/photo-4-desktop@2x.jpg 2x, img/content-images/photo-4-desktop@1x.jpg 1x">
+              <source media="(min-width: 768px)"
+                srcset="img/content-images/photo-4-tablet@2x.jpg 2x, img/content-images/photo-4-tablet@1x.jpg 1x">
+              <img class="photo-card__image" src="img/content-images/photo-4-mobile@1x.jpg"
+                srcset="img/content-images/photo-4-mobile@2x.jpg 2x, img/content-images/photo-4-mobile@1x.jpg 1x"
+                alt="Узкий перешеек между двумя скалами, напоминающий по виду мост." width="280" height="280">
+            </picture>
           </a>
           <div class="photo-card__container">
             <div class="photo-card__caption-wrapper">
@@ -123,10 +162,9 @@
               <p class="photo-card__author">Автор фото: Борис</p>
             </div>
             <span class="photo-card__like-wrapper">
-              <a href="" class="photo-card__like-button">
-                <svg width="23" height="21" viewBox="0 0 23 21" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" />
+              <a href="" class="photo-card__like-button" aria-label="Поставить лайк.">
+                <svg width="23" height="21" role="img" focusable="false">
+                  <use href="img/svg/sprite.svg#icon-like"></use>
                 </svg>
               </a>
               <span class="photo-card__like-quantity">254</span>
@@ -152,25 +190,36 @@
         <ul class="socials">
           <li class="socials__item">
             <a class="socials__link socials__link--vk" href="https://vk.com/htmlacademy" target="_blank"
-              aria-label="Вконтакте."></a>
+              aria-label="Вконтакте.">
+              <svg width="24" height="24" role="img" focusable="false">
+                <use href="img/svg/sprite.svg#icon-vk"></use>
+              </svg>
+            </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link--telegram" href="https://t.me/s/htmlacademy" target="_blank"
-              aria-label="Телеграм."></a>
+              aria-label="Телеграм.">
+              <svg width="24" height="24" role="img" focusable="false">
+                <use href="img/svg/sprite.svg#icon-telegram"></use>
+              </svg>
+            </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link--youtube" href="https://www.youtube.com/user/htmlacademyru"
-              target="_blank" aria-label="Ютьюб."></a>
+              target="_blank" aria-label="Ютьюб.">
+              <svg width="20" height="14" role="img" focusable="false">
+                <use href="img/svg/sprite.svg#icon-youtube"></use>
+              </svg>
+            </a>
           </li>
         </ul>
       </div>
       <div class="main-footer__copyrights copyrights">
         <a class="copyrights__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"
-          aria-label="HTML-academy.">
+          aria-label="На сайт HTML-academy.">
           <span class="copyrights__text">Разработано</span>
-          <svg class="copyrights__image" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 60 60" width="27" height="34">
-            <path fill="currentColor"
-              d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z" />
+          <svg width="27" height="34" role="img" focusable="false">
+            <use href="img/svg/sprite.svg#html-academy-logo"></use>
           </svg>
         </a>
       </div>

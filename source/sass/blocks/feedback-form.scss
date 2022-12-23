@@ -88,7 +88,7 @@
     }
 
     @include bootstrap.desktop {
-      width: 960px;
+      width: 100%;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -111,7 +111,7 @@
     }
 
     @include bootstrap.desktop {
-      width: 960px;
+      width: 100%;
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
@@ -123,6 +123,7 @@
 
   &--emotions {
     padding-bottom: 56px;
+    border-bottom: none;
 
     @include bootstrap.tablet {
       width: 648px;
@@ -252,13 +253,13 @@
 
   &--phone {
     &::after {
-      background-image: url("");
+      background-image: url("../img/svg/phone.svg");
     }
   }
 
   &--email {
     &::after {
-      background-image: url("");
+      background-image: url("../img/svg/mail.svg");
     }
   }
 }
@@ -287,6 +288,7 @@
 .feedback-form__label--visited-locations {
   @include bootstrap.tablet {
     width: 224px;
+    margin-bottom: 0;
   }
 
   @include bootstrap.desktop {
@@ -322,6 +324,16 @@
 
   &::placeholder {
     color: rgba(0, 0, 0, 0.3);
+  }
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:active {
+    background-color: #ffffff;
+    box-shadow: inset 0 0 0 4px #e5e5e5;
+    outline: none;
   }
 }
 

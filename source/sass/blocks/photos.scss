@@ -16,7 +16,10 @@
 }
 
 .photos__heading {
-  width: 320px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 30px 20px 17px;
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
@@ -39,6 +42,7 @@
   font-weight: 700;
   text-transform: uppercase;
   margin: 0 0 37px;
+  max-width: 400px;
 
   @include bootstrap.tablet {
     font-size: 30px;
@@ -49,6 +53,7 @@
   text-transform: uppercase;
   margin: 0;
   padding-bottom: 30px;
+  max-width: 458px;
 
   @include bootstrap.tablet {
     margin-bottom: 62px;
@@ -63,8 +68,8 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  width: 100%;
 
   @include bootstrap.tablet {
     display: grid;

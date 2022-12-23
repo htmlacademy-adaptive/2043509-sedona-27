@@ -15,7 +15,7 @@
   padding: 38px 82px 23px;
 
   @include bootstrap.tablet {
-    padding: 36px 76px 36px 45px;
+    padding: 37px 76px 36px 60px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -23,7 +23,7 @@
   }
 
   @include bootstrap.desktop {
-    padding: 36px 136px 36px 104px;
+    padding: 36px 136px 36px 119px;
   }
 }
 
@@ -47,10 +47,6 @@
 
   @include bootstrap.tablet {
     margin-bottom: 0;
-    padding-right: 3px;
-  }
-
-  @include bootstrap.desktop {
-    padding-right: 2px;
+    padding-left: 11px;
   }
 }

@@ -8,9 +8,9 @@
   gap: 25px;
 
   @include bootstrap.tablet {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(256px, 1fr));
     justify-items: center;
+    column-gap: 0;
   }
 }
 
@@ -21,7 +21,14 @@
 
   @include bootstrap.tablet {
     text-align: center;
-    padding: 158px 33px 60px;
+    padding: 148px 10px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include bootstrap.desktop {
+    padding: 159px 10px 69px;
   }
 }
 
@@ -41,7 +48,7 @@
     height: 80px;
     left: 50%;
     transform: translateX(-50%);
-    top: 60px;
+    top: 55px;
   }
 
   @include bootstrap.desktop {
@@ -53,24 +60,50 @@
 .bonuses-list__item--housing {
   &::before {
     background-image: url("../img/svg/icon-house.svg");
+
+    @include bootstrap.desktop {
+      top: 63px;
+    }
   }
 }
 
 .bonuses-list__item--food {
   &::before {
     background-image: url("../img/svg/icon-burger.svg");
+
+    @include bootstrap.desktop {
+      top: 66px;
+    }
   }
 }
 
 .bonuses-list__item--souvenirs {
+  @include bootstrap.tablet {
+    padding-top: 144px;
+  }
+
+  @include bootstrap.desktop {
+    padding-top: 160px;
+  }
+
   &::before {
     background-image: url("../img/svg/icon-gift.svg");
+
+    @include bootstrap.tablet {
+      top: 61px;
+      left: 51%;
+    }
+
+    @include bootstrap.desktop {
+      top: 67px;
+      left: 49%;
+    }
   }
 }
 
 
 .bonuses-list__title {
-  margin: 8px 0 16px 0;
+  margin: 9px 0 16px;
   max-width: 237px;
   font-size: 18px;
   line-height: 26px;
@@ -79,6 +112,8 @@
 
   @include bootstrap.tablet {
     max-width: 190px;
+    font-size: 21px;
+    margin-bottom: 23px;
   }
 
   @include bootstrap.desktop {
@@ -93,14 +128,18 @@
   color: #333333;
 
   @include bootstrap.tablet {
-    max-width: 190px;
+    max-width: 182px;
   }
 
   @include bootstrap.desktop {
     max-width: 300px;
+  }
+}
 
-    &--souvenirs {
-      max-width: 196px;
-    }
+.bonuses-list__inverse-paragraph {
+  display: none;
+
+  @include bootstrap.desktop {
+    display: block;
   }
 }

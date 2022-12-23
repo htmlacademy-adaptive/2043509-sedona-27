@@ -1,14 +1,14 @@
 @use "../global/bootstrap.scss";
 
 .booking {
-  padding: 38px 18px 49px;
+  padding: 39px 18px 49px;
 
   @include bootstrap.tablet {
-    padding: 61px 18px 58px;
+    padding: 66px 18px 58px;
   }
 
   @include bootstrap.desktop {
-    padding-bottom: 66px;
+    padding: 60px 18px 67px;
   }
 }
 
@@ -26,10 +26,20 @@
   font-weight: 700;
   text-transform: uppercase;
   max-width: 260px;
-  margin: 0 0 30px;
+  margin: 0 0 21px;
 
   @include bootstrap.tablet {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
+    font-size: 30px;
+    max-width: 320px;
+  }
+}
+
+.booking__inverse-paragraph {
+  display: none;
+
+  @include bootstrap.tablet {
+    display: block;
   }
 }
 
@@ -53,6 +63,6 @@
   width: 284px;
 
   @include bootstrap.tablet {
-    width: 435px;
+    width: 458px;
   }
 }
