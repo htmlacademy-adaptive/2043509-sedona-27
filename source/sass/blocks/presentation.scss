@@ -22,8 +22,9 @@
   color: #000000;
   text-transform: uppercase;
   margin: 0 0 29px 0;
-  max-width: 280px;
+  max-width: 446px;
   text-align: center;
+  padding: 0 20px;
 
   @include bootstrap.tablet {
     font-size: 30px;
@@ -35,8 +36,9 @@
   color: #000000;
   text-transform: uppercase;
   margin: 0 0 38px 0;
-  max-width: 270px;
+  min-width: 270px;
   text-align: center;
+  padding: 0 20px;
 
   @include bootstrap.tablet {
     margin-bottom: 65px;
@@ -51,6 +53,9 @@
 .presentation__video-wrapper {
   position: relative;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .presentation__video {
@@ -58,6 +63,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  width: 100%;
 
   @media screen and (min-resolution: 2dppx) {
     background-image: url("../img/decoration-images/video-mobile@2x.jpg");

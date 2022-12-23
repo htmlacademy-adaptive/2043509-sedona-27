@@ -88,7 +88,7 @@
     }
 
     @include bootstrap.desktop {
-      width: 960px;
+      width: 100%;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -111,7 +111,7 @@
     }
 
     @include bootstrap.desktop {
-      width: 960px;
+      width: 100%;
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
@@ -123,6 +123,7 @@
 
   &--emotions {
     padding-bottom: 56px;
+    border-bottom: none;
 
     @include bootstrap.tablet {
       width: 648px;
@@ -287,6 +288,7 @@
 .feedback-form__label--visited-locations {
   @include bootstrap.tablet {
     width: 224px;
+    margin-bottom: 0;
   }
 
   @include bootstrap.desktop {

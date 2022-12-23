@@ -17,6 +17,10 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+
+  @include bootstrap.tablet {
+    z-index: 0;
+  }
 }
 
 .pop-up-menu--no-js {

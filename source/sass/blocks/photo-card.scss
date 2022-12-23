@@ -44,8 +44,9 @@
 }
 
 .photo-card__image {
-  display: flex;
+  display: block;
   object-fit: cover;
+  width: 100%;
 
   @include bootstrap.tablet {
     width: 100%;
