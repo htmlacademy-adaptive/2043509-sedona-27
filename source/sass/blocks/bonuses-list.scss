@@ -8,9 +8,9 @@
   gap: 25px;
 
   @include bootstrap.tablet {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(256px, 1fr));
     justify-items: center;
+    column-gap: 0;
   }
 }
 
@@ -21,7 +21,10 @@
 
   @include bootstrap.tablet {
     text-align: center;
-    padding: 158px 33px 60px;
+    padding: 148px 10px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -63,6 +66,10 @@
 }
 
 .bonuses-list__item--souvenirs {
+  @include bootstrap.tablet {
+    padding-top: 144px;
+  }
+
   &::before {
     background-image: url("../img/svg/icon-gift.svg");
   }
@@ -70,7 +77,7 @@
 
 
 .bonuses-list__title {
-  margin: 9px 0 16px 0;
+  margin: 9px 0 16px;
   max-width: 237px;
   font-size: 18px;
   line-height: 26px;
@@ -79,6 +86,8 @@
 
   @include bootstrap.tablet {
     max-width: 190px;
+    font-size: 21px;
+    margin-bottom: 23px;
   }
 
   @include bootstrap.desktop {
@@ -93,7 +102,7 @@
   color: #333333;
 
   @include bootstrap.tablet {
-    max-width: 190px;
+    max-width: 182px;
   }
 
   @include bootstrap.desktop {

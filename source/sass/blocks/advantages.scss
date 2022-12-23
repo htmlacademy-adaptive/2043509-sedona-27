@@ -15,7 +15,8 @@
   text-transform: uppercase;
 
   @include bootstrap.tablet {
-    margin-top: 48px;
+    font-size: 21px;
+    margin: 48px auto 30px;
     max-width: 520px;
   }
 }
@@ -58,6 +59,11 @@
   display: flex;
   width: 100%;
   object-fit: cover;
+
+
+  @include bootstrap.tablet {
+    height: 256px;
+  }
 }
 
 .advantages__bonuses-list-wrapper {

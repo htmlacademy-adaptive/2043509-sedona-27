@@ -1,11 +1,5 @@
 @use "../global/bootstrap.scss";
 
-.main-header {
-  @include bootstrap.tablet {
-    padding: 2px 0;
-  }
-}
-
 .main-header__navigation {
   min-height: 56px;
 }
