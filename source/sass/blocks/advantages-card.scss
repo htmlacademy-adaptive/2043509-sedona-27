@@ -3,7 +3,7 @@
 .advantages-card {
   width: 100%;
   box-sizing: border-box;
-  padding: 37px 18px 40px;
+  padding: 38px 18px 38px;
   background-color: bootstrap.$main-color;
   color: #ffffff;
 
@@ -125,6 +125,7 @@
   }
 
   &--without-image {
+    max-width: 256px;
     color: #333333;
 
     @include bootstrap.desktop {
