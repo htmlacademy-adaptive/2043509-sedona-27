@@ -15,11 +15,11 @@
   @include bootstrap.tablet {
     width: 100%;
     border: none;
-    padding: 115px 20px 33px;
+    padding: 64px 20px 33px;
   }
 
   @include bootstrap.desktop {
-    padding: 64px 20px 51px;
+    padding: 111px 20px 51px;
   }
 }
 
@@ -35,6 +35,11 @@
   @include bootstrap.tablet {
     font-size: 30px;
     max-width: 320px;
+    margin: 0 0 20px;
+  }
+
+  @include bootstrap.desktop {
+    margin: 0 0 34px;
   }
 }
 

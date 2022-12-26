@@ -7,11 +7,11 @@
   padding-bottom: 24px;
 
   @include bootstrap.tablet {
-    padding: 51px 60px 64px;
+    padding: 51px 60px 24px;
   }
 
   @include bootstrap.desktop {
-    padding: 33px 120px 64px;
+    padding: 0 120px 64px;
   }
 }
 
@@ -127,6 +127,7 @@
 
     @include bootstrap.tablet {
       width: 648px;
+      padding-bottom: 48px;
     }
 
     @include bootstrap.desktop {
@@ -138,7 +139,7 @@
 
 .feedback-form__legend {
   display: block;
-  margin: 0 auto 30px;
+  margin: 0 auto 20px;
   padding: 24px 0 0;
   font-size: 18px;
   line-height: 26px;
@@ -147,22 +148,64 @@
   text-transform: uppercase;
   text-align: center;
   width: 280px;
+  position: relative;
 
   @include bootstrap.tablet {
     padding-top: 0;
-    transform: translateY(10px);
     font-size: 21px;
+    margin-bottom: 46px;
+  }
+}
+
+.feedback-form__legend--about-user {
+  @include bootstrap.tablet {
+    transform: translate(20px, 19px);
   }
 
-  &--user-contacts {
-    @include bootstrap.tablet {
-      text-align: left;
-    }
+  @include bootstrap.desktop {
+    transform: translate(32px, 19px);
+  }
+}
 
-    @include bootstrap.desktop {
-      text-align: center;
-      margin-left: 93px;
-    }
+.feedback-form__legend--user-contacts {
+  @include bootstrap.tablet {
+    transform: translate(-10px, 19px);
+  }
+
+  @include bootstrap.desktop {
+    transform: translate(0, 19px);
+  }
+}
+
+.feedback-form__legend--impression {
+  @include bootstrap.tablet {
+    margin-bottom: 29px;
+  }
+
+  @include bootstrap.desktop {
+    margin-bottom: 45px;
+  }
+}
+
+.feedback-form__legend--visited-locations {
+  @include bootstrap.tablet {
+    margin-bottom: 29px;
+  }
+
+  @include bootstrap.desktop {
+    margin-bottom: 61px;
+    transform: translate(-3px, 2px);
+  }
+}
+
+.feedback-form__legend--emotions {
+  @include bootstrap.tablet {
+    margin-bottom: 27px;
+  }
+
+  @include bootstrap.desktop {
+    margin-bottom: 44px;
+    transform: translate(0, 16px);
   }
 }
 
@@ -266,7 +309,11 @@
 
 .feedback-form__label--impression {
   @include bootstrap.tablet {
-    margin-bottom: 0;
+    margin: 0 28px 0 0;
+
+    &:nth-of-type(3n) {
+      margin-right: 0;
+    }
   }
 
   @include bootstrap.desktop {
@@ -338,7 +385,7 @@
 }
 
 .feedback-form__text-area {
-  padding: 16px;
+  padding: 16px 16px 4px;
   background-color: #f2f2f2;
   font-family: bootstrap.$font-name;
   font-size: 18px;
@@ -352,6 +399,7 @@
 
   @include bootstrap.tablet {
     min-width: 648px;
+    padding-bottom: 14px;
   }
 
   @include bootstrap.desktop {
@@ -378,9 +426,11 @@
 
 .feedback-form__button {
   width: 280px;
+  margin-bottom: 2px;
 
   @include bootstrap.tablet {
     width: 324px;
+    margin-bottom: 0;
   }
 
   @include bootstrap.desktop {
@@ -389,7 +439,13 @@
 }
 
 .feedback-form__info-text {
+  font-size: 12px;
   display: flex;
   color: rgba(51, 51, 51, 0.6);
   text-transform: uppercase;
+
+  @include bootstrap.tablet {
+    font-size: 14px;
+    padding-top: 9px;
+  }
 }

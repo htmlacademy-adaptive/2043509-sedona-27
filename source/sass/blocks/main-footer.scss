@@ -26,7 +26,8 @@
     padding: 36px 136px 36px 119px;
   }
 
-  &--catalog {
+  &--catalog,
+  &--form {
     padding: 29px 82px 23px;
 
     @include bootstrap.tablet {
@@ -34,7 +35,7 @@
     }
 
     @include bootstrap.desktop {
-      padding: 76px 120px 36px 120px;
+      padding: 35px 120px 36px 120px;
     }
   }
 }
@@ -62,7 +63,8 @@
     padding-left: 11px;
   }
 
-  &--catalog {
+  &--catalog,
+  &--form {
     @include bootstrap.tablet {
       padding: 0 8px 0 0;
     }
