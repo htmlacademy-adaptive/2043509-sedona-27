@@ -137,6 +137,10 @@
   color: #000000;
   opacity: 0.3;
 
+  @include bootstrap.tablet {
+    margin-right: 9px;
+  }
+
   @include bootstrap.desktop {
     color: #ffffff;
     opacity: 1;

@@ -21,7 +21,7 @@
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
-  margin: 0 0 29px 0;
+  margin: 0 0 27px 0;
   max-width: 446px;
   text-align: center;
   padding: 0 20px;
@@ -29,6 +29,7 @@
   @include bootstrap.tablet {
     font-size: 30px;
     max-width: 446px;
+    margin: 0 0 32px 0;
   }
 }
 
@@ -41,12 +42,12 @@
   padding: 0 20px;
 
   @include bootstrap.tablet {
-    margin-bottom: 65px;
+    margin-bottom: 89px;
     max-width: 446px;
   }
 
   @include bootstrap.desktop {
-    margin-bottom: 63px;
+    margin-bottom: 85px;
   }
 }
 

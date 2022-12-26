@@ -7,7 +7,7 @@
   padding-bottom: 17px;
 
   @include bootstrap.tablet {
-    padding-bottom: 58px;
+    padding-bottom: 56px;
   }
 
   @include bootstrap.desktop {
@@ -20,7 +20,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 20px 17px;
+  padding: 38px 20px 6px;
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
   box-sizing: border-box;
@@ -28,7 +28,7 @@
   @include bootstrap.tablet {
     min-width: 468px;
     border: none;
-    padding: 61px 20px 31px;
+    padding: 66px 20px 31px;
   }
 
   @include bootstrap.desktop {
@@ -41,11 +41,12 @@
   line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0 0 37px;
+  margin: 0 0 25px;
   max-width: 400px;
 
   @include bootstrap.tablet {
     font-size: 30px;
+    margin-bottom: 32px;
   }
 }
 
@@ -56,11 +57,12 @@
   max-width: 458px;
 
   @include bootstrap.tablet {
-    margin-bottom: 62px;
+    padding-bottom: 50px;
+    max-width: 440px;
   }
 
   @include bootstrap.desktop {
-    margin-bottom: 69px;
+    padding-bottom: 56px;
   }
 }
 
@@ -80,7 +82,7 @@
 
 .photos__item {
   box-sizing: border-box;
-  padding: 24px 20px 25px;
+  padding: 24px 20px 20px;
 
   @include bootstrap.tablet {
     padding: 0;
