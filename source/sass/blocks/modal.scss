@@ -54,18 +54,22 @@
 }
 
 .modal__text-wrapper {
-  padding: 36px 39px 57px 37px;
+  padding: 39px 39px 51px 37px;
   text-align: center;
 
   @include bootstrap.tablet {
-    padding: 52px 99px 29px 97px;
+    padding: 52px 99px 53px 97px;
+  }
+
+  @include bootstrap.desktop {
+    padding: 50px 99px 53px 97px;
   }
 
   &--failure {
     padding: 45px 42px 28px 41px;
 
     @include bootstrap.tablet {
-      padding: 38px 47px 14px 46px;
+      padding: 48px 47px 47px 46px;
     }
   }
 }
@@ -75,16 +79,24 @@
   line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0 0 37px;
+  margin: 0 0 25px;
+  max-width: 245px;
 
   @include bootstrap.tablet {
     font-size: 30px;
+    max-width: 450px;
+    margin: 0 0 29px;
+  }
+
+  @include bootstrap.desktop {
+    margin: 0 0 31px;
   }
 
   &--failure {
     @include bootstrap.tablet {
       font-size: 30px;
       line-height: 40px;
+      margin: 0 0 23px;
     }
   }
 }
@@ -111,9 +123,11 @@
 .modal__button {
   &--success {
     width: 280px;
+    font-size: 18px;
 
     @include bootstrap.tablet {
       width: 458px;
+      font-size: 21px;
     }
   }
 
