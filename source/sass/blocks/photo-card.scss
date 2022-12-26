@@ -10,7 +10,7 @@
   }
 }
 
-.photo-card:nth-of-type(4n-1) {
+.photo-card:nth-of-type(odd):not(:first-of-type) {
   @include bootstrap.tablet {
     background-color: #eaeaea;
   }
