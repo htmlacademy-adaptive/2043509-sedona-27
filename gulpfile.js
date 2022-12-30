@@ -11,6 +11,7 @@ import svgo from "gulp-svgmin";
 import svgstore from "gulp-svgstore";
 import del from "del";
 import browser from "browser-sync";
+import htmlmin from "gulp-htmlmin";
 
 // Styles
 
@@ -27,8 +28,10 @@ export const styles = () => {
 
 // HTML
 
-const html = () => {
-  return gulp.src("source/*.html").pipe(gulp.dest("build"));
+export const html = () => {
+  return gulp.src("source/*.html")
+  .pipe(htmlmin({ collapseWhitespace: true }))
+  .pipe(gulp.dest("build"));
 };
 
 // Scripts
@@ -119,7 +122,7 @@ export const sprite = () => {
 
 const copy = (done) => {
   gulp
-    .src(["source/fonts/*.{woff2,woff}", "source/*.ico"], {
+    .src(["source/fonts/*.{woff2,woff}", "source/*.ico", "source/*.webmanifest"], {
       base: "source",
     })
     .pipe(gulp.dest("build"));
