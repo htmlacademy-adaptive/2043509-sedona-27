@@ -12,7 +12,6 @@
   color: #000000;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
 
   &:hover {
@@ -25,7 +24,12 @@
 }
 
 .copyrights__text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   color: inherit;
   text-transform: uppercase;
   margin-right: 12px;
+  max-width: 200px;
 }

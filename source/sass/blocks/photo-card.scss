@@ -100,6 +100,7 @@
   font-weight: 700;
   text-transform: uppercase;
   margin: 0 0 1px;
+  max-width: 280px;
 
   @include bootstrap.desktop {
     color: #ffffff;
@@ -109,6 +110,7 @@
 .photo-card__author {
   color: #333333;
   margin: 0;
+  max-width: 280px;
 
   @include bootstrap.desktop {
     color: #ffffff;
