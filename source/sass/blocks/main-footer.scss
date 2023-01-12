@@ -25,6 +25,19 @@
   @include bootstrap.desktop {
     padding: 36px 136px 36px 119px;
   }
+
+  &--catalog,
+  &--form {
+    padding: 29px 82px 23px;
+
+    @include bootstrap.tablet {
+      padding: 76px 60px 36px 60px;
+    }
+
+    @include bootstrap.desktop {
+      padding: 35px 120px 36px 120px;
+    }
+  }
 }
 
 .main-footer__hashtag {
@@ -48,5 +61,12 @@
   @include bootstrap.tablet {
     margin-bottom: 0;
     padding-left: 11px;
+  }
+
+  &--catalog,
+  &--form {
+    @include bootstrap.tablet {
+      padding: 0 8px 0 0;
+    }
   }
 }

@@ -10,7 +10,7 @@
   }
 }
 
-.photo-card:nth-of-type(4n-1) {
+.photo-card:nth-of-type(odd):not(:first-of-type) {
   @include bootstrap.tablet {
     background-color: #eaeaea;
   }
@@ -100,6 +100,7 @@
   font-weight: 700;
   text-transform: uppercase;
   margin: 0 0 1px;
+  max-width: 280px;
 
   @include bootstrap.desktop {
     color: #ffffff;
@@ -109,6 +110,7 @@
 .photo-card__author {
   color: #333333;
   margin: 0;
+  max-width: 280px;
 
   @include bootstrap.desktop {
     color: #ffffff;
@@ -136,6 +138,10 @@
   margin-right: 14px;
   color: #000000;
   opacity: 0.3;
+
+  @include bootstrap.tablet {
+    margin-right: 9px;
+  }
 
   @include bootstrap.desktop {
     color: #ffffff;

@@ -5,9 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Седона, форма отзыва.</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="./fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico"><!-- 32×32 -->
-  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="img/svg/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
   <link rel="manifest" href="../manifest.webmanifest">
 </head>
@@ -43,10 +45,10 @@
       </button>
     </nav>
   </header>
-  <main class="feedback-main">
+  <main>
     <div class="intro intro--not-index-page">
-      <img class="intro__image intro__image--not-index-page" src="./img/content-images/sedona-feedback.svg"
-        alt="Седона." width="229" height="39">
+      <img class="intro__image intro__image--not-index-page" src="./img/svg/sedona-feedback.svg" alt="Седона."
+        width="229" height="39">
     </div>
     <section class="feedback-heading">
       <h1 class="feedback-heading__title">Оставьте свой отзыв</h1>
@@ -58,7 +60,7 @@
       <form class="feedback__form feedback-form" action="https://echo.htmlacademy.ru/" method="post">
         <div class="feedback-form__wrapper">
           <fieldset class="feedback-form__area feedback-form__area--about-user">
-            <legend class="feedback-form__legend">Представьтесь:</legend>
+            <legend class="feedback-form__legend feedback-form__legend--about-user">Представьтесь:</legend>
             <label class="feedback-form__label feedback-form__label--about-user" for="name">
               <span class="feedback-form__label-text">Имя<sup class="star-required">*</sup>:</span>
               <input class="feedback-form__input" type="text" name="name" id="name" placeholder="Имя" required></label>
@@ -84,7 +86,8 @@
           </fieldset>
         </div>
         <fieldset class="feedback-form__area feedback-form__area--impression">
-          <legend class="feedback-form__legend feedback-form__legend--decorated">Ваше Общее впечатление:</legend>
+          <legend class="feedback-form__legend feedback-form__legend--impression feedback-form__legend--decorated">Ваше
+            Общее впечатление:</legend>
           <label
             class="feedback-form__label feedback-form__label--impression feedback-form-control feedback-form-control--impression"
             for="positive">
@@ -108,7 +111,9 @@
           </label>
         </fieldset>
         <fieldset class="feedback-form__area feedback-form__area--visited-locations">
-          <legend class="feedback-form__legend feedback-form__legend--decorated">Посещенные достопримечательности:
+          <legend
+            class="feedback-form__legend feedback-form__legend--visited-locations feedback-form__legend--decorated">
+            Посещенные достопримечательности:
           </legend>
           <label
             class="feedback-form__label feedback-form__label--visited-locations feedback-form-control feedback-form-control--visited-locations"
@@ -156,21 +161,22 @@
           </label>
         </fieldset>
         <fieldset class="feedback-form__area feedback-form__area--emotions">
-          <legend class="feedback-form__legend feedback-form__legend--decorated">Опишите свои эмоции:</legend>
-          <textarea class="feedback-form__text-area" name="emotions" cols="30" rows="10"
+          <legend class="feedback-form__legend feedback-form__legend--emotions feedback-form__legend--decorated">Опишите
+            свои эмоции:</legend>
+          <textarea class="feedback-form__text-area" name="emotions" cols="30" rows="5"
             placeholder="Опишите подробно все свои восторги "></textarea>
         </fieldset>
         <div class="feedback-form__button-wrapper">
           <button class="feedback-form__button button" type="submit">Отправить отзыв</button>
-          <span class="feedback-form__info-text"><sup class="star-required">*</sup> - Обязательные поля</span>
+          <span class="feedback-form__info-text"><sup class="star-required">*</sup> &mdash; Обязательные поля</span>
         </div>
       </form>
     </section>
   </main>
   <footer class="main-footer">
-    <div class="main-footer__wrapper">
+    <div class="main-footer__wrapper main-footer__wrapper--form">
       <span class="main-footer__hashtag">#visitsedona</span>
-      <div class="main-footer__socials">
+      <div class="main-footer__socials main-footer__socials--form">
         <ul class="socials">
           <li class="socials__item">
             <a class="socials__link socials__link--vk" href="https://vk.com/htmlacademy" target="_blank"
@@ -198,12 +204,12 @@
           </li>
         </ul>
       </div>
-      <div class="main-footer__copyrights copyrights">
+      <div class="copyrights">
         <a class="copyrights__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"
           aria-label="На сайт HTML-academy.">
           <span class="copyrights__text">Разработано</span>
           <svg width="27" height="34" role="img" focusable="false">
-            <use href="img/svg/sprite.svg#html-academy-logo"></use>
+            <use href="img/svg/sprite.svg#htmlacademy"></use>
           </svg>
         </a>
       </div>
@@ -214,7 +220,7 @@
     <div class="modal__success">
       <div class="modal__wrapper">
         <div class="modal__text-wrapper">
-          <h2 class="modal__title">Ваш отзыв отправлен</h2>
+          <h2 class="modal__title">Ваш отзыв отправлен!</h2>
           <p class="modal__subtitle">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbsp;ближайшее время мы
             опубликуем его на сайте.</p>
         </div>
