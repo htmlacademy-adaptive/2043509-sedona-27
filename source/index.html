@@ -156,8 +156,11 @@
     </section>
     <section class="map">
       <h2 class="visually-hidden">Седона на карте.</h2>
-      <iframe class="map__frame" title="maps Yandex frame" src="https://yandex.ru/map-widget/v1/-/CCUfVBSbLD"
-        width="320" height="350" allow="fullscreen"></iframe>
+      <!-- При отключенном js показывается ссылка-картинка на карту за счет модификатора no-js -->
+      <a class="map__link map__link--no-js" href="https://yandex.ru/maps/-/CCUzaTSYGB" target="_blank"
+        aria-label="Сылка на Яндекс-картах городка Седона."></a>
+      <iframe class="map__frame map__frame--no-js" title="maps Yandex frame"
+        src="https://yandex.ru/map-widget/v1/-/CCUfVBSbLD" width="320" height="350" allow="fullscreen"></iframe>
     </section>
   </main>
   <footer class="main-footer">
