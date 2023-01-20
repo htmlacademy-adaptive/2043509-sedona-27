@@ -12,7 +12,6 @@
   margin: 0 auto;
 
   @include bootstrap.tablet {
-    min-width: 768px;
     max-width: 1200px;
   }
 
